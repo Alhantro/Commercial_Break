@@ -8,4 +8,5 @@ function OnGUI() {
 		return;
 	}
 	GUI.DrawTexture(Rect(0,0,Screen.width,Screen.height), aTexture, ScaleMode.StretchToFill, true, 1.0f);
+	// draws graphics 
 }
