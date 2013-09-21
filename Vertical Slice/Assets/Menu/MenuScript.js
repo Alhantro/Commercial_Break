@@ -5,7 +5,7 @@ function Start () {
 }
 
 function Update () {
-	Debug.Log(Screen.currentResolution.width + "x" + Screen.currentResolution.height);
+	//Debug.Log(Screen.currentResolution.width + "x" + Screen.currentResolution.height);
 }
 
 function OnGUI() {

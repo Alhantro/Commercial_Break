@@ -18,7 +18,7 @@
 	<DebugType>full</DebugType>
 	<Optimize>false</Optimize>
 	<OutputPath>Temp\bin\Debug\</OutputPath>
-	<DefineConstants>DEBUG;TRACE;UNITY_STANDALONE;ENABLE_MICROPHONE;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;ENABLE_AUDIO_FMOD;ENABLE_NETWORK;ENABLE_MONO;ENABLE_PHYSICS;ENABLE_TERRAIN;ENABLE_CACHING;ENABLE_SUBSTANCE;ENABLE_GENERICS;ENABLE_CLOTH;ENABLE_MOVIES;ENABLE_AUDIO;ENABLE_WWW;ENABLE_SHADOWS;ENABLE_DUCK_TYPING;UNITY_4_0_0;UNITY_4_0;UNITY_STANDALONE_WIN;ENABLE_PROFILER;UNITY_EDITOR</DefineConstants>
+	<DefineConstants>DEBUG;TRACE;UNITY_STANDALONE;ENABLE_MICROPHONE;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;ENABLE_AUDIO_FMOD;ENABLE_NETWORK;ENABLE_MONO;ENABLE_PHYSICS;ENABLE_TERRAIN;ENABLE_CACHING;ENABLE_SUBSTANCE;ENABLE_GENERICS;ENABLE_CLOTH;ENABLE_MOVIES;ENABLE_AUDIO;ENABLE_WWW;ENABLE_SHADOWS;ENABLE_DUCK_TYPING;UNITY_4_0_0;UNITY_4_0;UNITY_STANDALONE_WIN;ENABLE_PROFILER;UNITY_EDITOR;UNITY_TEAM_LICENSE</DefineConstants>
 	<ErrorReport>prompt</ErrorReport>
 	<WarningLevel>4</WarningLevel>
 	<NoWarn>0169</NoWarn>
@@ -44,22 +44,23 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\MenuScript.js" />
-     <Compile Include="Assets\Scripts\BackgroundSetter\globalScript.js" />
-     <Compile Include="Assets\Scripts\BackgroundSetter\setBackgroundTexture.js" />
-     <Compile Include="Assets\Scripts\ChoiceScript\Choice.js" />
-     <Compile Include="Assets\Scripts\Constants.js" />
-     <Compile Include="Assets\Scripts\HUDScript.js" />
-     <Compile Include="Assets\Scripts\Initializer\Initialization.js" />
-     <Compile Include="Assets\Scripts\Jobs\Army.js" />
-     <Compile Include="Assets\Scripts\Jobs\Cleaner.js" />
-     <Compile Include="Assets\Scripts\Jobs\Fireman.js" />
-     <Compile Include="Assets\Scripts\Jobs\Nurse.js" />
-     <Compile Include="Assets\Scripts\Jobs\Policeman.js" />
-     <Compile Include="Assets\Scripts\Jobs\Secretary.js" />
-     <Compile Include="Assets\Scripts\Selection.js" />
-     <Compile Include="Assets\Scripts\Superclass\Jobs.js" />
-     <None Include="Assets\Scripts\XML\Fireman.xml" />
+     <Compile Include="Assets\Menu\MenuScript.js" />
+     <Compile Include="Assets\Scripts\City\HUD\Constants.js" />
+     <Compile Include="Assets\Scripts\City\HUD\HUDScript.js" />
+     <Compile Include="Assets\Scripts\City\Selector.js" />
+     <Compile Include="Assets\Scripts\JobSystem\BackgroundSetter\globalScript.js" />
+     <Compile Include="Assets\Scripts\JobSystem\BackgroundSetter\setBackgroundTexture.js" />
+     <Compile Include="Assets\Scripts\JobSystem\ChoiceScript\Choice.js" />
+     <Compile Include="Assets\Scripts\JobSystem\Initializer\Initialization.js" />
+     <Compile Include="Assets\Scripts\JobSystem\Jobs\Army.js" />
+     <Compile Include="Assets\Scripts\JobSystem\Jobs\Cleaner.js" />
+     <Compile Include="Assets\Scripts\JobSystem\Jobs\Fireman.js" />
+     <Compile Include="Assets\Scripts\JobSystem\Jobs\Nurse.js" />
+     <Compile Include="Assets\Scripts\JobSystem\Jobs\Policeman.js" />
+     <Compile Include="Assets\Scripts\JobSystem\Jobs\Secretary.js" />
+     <Compile Include="Assets\Scripts\JobSystem\Selection.js" />
+     <Compile Include="Assets\Scripts\JobSystem\Superclass\Jobs.js" />
+     <None Include="Assets\Scripts\JobSystem\XML\Fireman.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

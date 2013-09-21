@@ -31,7 +31,7 @@ public class Jobs
 		//filePath = bla bla
 		
 		//for demonstration purposes of fireman
-		var filePath:String = Application.dataPath + "\\Scripts\\XML\\" + "Fireman.xml";
+		var filePath:String = Application.dataPath + "\\Scripts\\JobSystem\\XML\\" + "Fireman.xml";
 		//create xml document
 		var xmlDoc:XmlDocument = new XmlDocument();
 		
