@@ -1,8 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Selection.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\MenuScript.js">
     <Files>
       <File FileName="Assets\Scripts\Selection.js" Line="1" Column="1" />
+      <File FileName="Assets\MenuScript.js" Line="22" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
