@@ -8,6 +8,6 @@ function OnMouseUp()
 
 function setJob()
 {
-	var jobName:String = "Fireman";				//still needs some thought
+	var jobName:String = gameObject.name;				//still needs some thought
 	GameObject.Find("indestructable").GetComponent(globalScript).setJob(jobName);
 }
