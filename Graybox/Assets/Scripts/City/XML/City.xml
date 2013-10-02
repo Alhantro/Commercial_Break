@@ -1,0 +1,21 @@
+<root>
+	<building>
+		<Name>CleanerBuilding</Name>
+		<TexturePath>City/Textures/CleanerBuilding/cleanerBuilding</TexturePath>
+	</building>
+	
+	<building>
+		<Name>CopBuilding</Name>
+		<TexturePath>City/Textures/CopBuilding/copBuilding</TexturePath>
+	</building>
+	
+	<building>
+		<Name>FireBuilding</Name>
+		<TexturePath>City/Textures/FireBuilding/fireBuilding</TexturePath>
+	</building>
+	
+	<building>
+		<Name>GardenBuilding</Name>
+		<TexturePath>City/Textures/GardenBuilding/gardenBuilding</TexturePath>
+	</building>
+</root>
