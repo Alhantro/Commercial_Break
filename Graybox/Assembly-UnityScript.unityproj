@@ -44,12 +44,10 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Menu\MenuScript.js" />
      <Compile Include="Assets\Scripts\City\HUD\Constants.js" />
      <Compile Include="Assets\Scripts\City\HUD\HUDScript.js" />
+     <Compile Include="Assets\Scripts\City\Initializer\BuildingScript.js" />
      <Compile Include="Assets\Scripts\City\Initializer\CityInitializer.js" />
-     <Compile Include="Assets\Scripts\City\Selector.js" />
-     <Compile Include="Assets\Scripts\JobSystem\BackgroundSetter\globalScript.js" />
      <Compile Include="Assets\Scripts\JobSystem\BackgroundSetter\setBackgroundTexture.js" />
      <Compile Include="Assets\Scripts\JobSystem\ChoiceScript\Choice.js" />
      <Compile Include="Assets\Scripts\JobSystem\Initializer\Initialization.js" />
@@ -61,6 +59,8 @@
      <Compile Include="Assets\Scripts\JobSystem\Jobs\Secretary.js" />
      <Compile Include="Assets\Scripts\JobSystem\Selection.js" />
      <Compile Include="Assets\Scripts\JobSystem\Superclass\Jobs.js" />
+     <Compile Include="Assets\Scripts\Menu\MenuScript.js" />
+     <Compile Include="Assets\Scripts\Menu\globalScript.js" />
      <None Include="Assets\Scripts\City\XML\City.xml" />
      <None Include="Assets\Scripts\JobSystem\XML\Fireman.xml" />
   </ItemGroup>

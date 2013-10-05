@@ -1,21 +1,29 @@
 <root>
 	<building>
 		<Name>CleanerBuilding</Name>
+		<JobName>Cleaner</JobName>
 		<TexturePath>City/Textures/CleanerBuilding/cleanerBuilding</TexturePath>
+		<NormalMap>City/Textures/N_Cleanerbuilding/cleanerbuilding</NormalMap>
 	</building>
 	
 	<building>
 		<Name>CopBuilding</Name>
+		<JobName>Cop</JobName>
 		<TexturePath>City/Textures/CopBuilding/copBuilding</TexturePath>
+		<NormalMap>City/Textures/N_CopBuilding/copBuilding</NormalMap>
 	</building>
 	
 	<building>
 		<Name>FireBuilding</Name>
+		<JobName>Fireman</JobName>
 		<TexturePath>City/Textures/FireBuilding/fireBuilding</TexturePath>
+		<NormalMap>City/Textures/N_FireBuilding/fireBuilding</NormalMap>
 	</building>
 	
 	<building>
 		<Name>GardenBuilding</Name>
+		<JobName>Gardener</JobName>
 		<TexturePath>City/Textures/GardenBuilding/gardenBuilding</TexturePath>
+		<NormalMap>City/Textures/N_GardenBuilding/gardenBuilding</NormalMap>
 	</building>
 </root>

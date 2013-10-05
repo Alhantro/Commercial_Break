@@ -28,8 +28,7 @@ function Awake()
 	{
 		job = new Secretary();
 	}*/
-	
-	
 	job.setTexture();
-	job.readXML();
+	job.createSlots();
+	job.fillSlots();
 }

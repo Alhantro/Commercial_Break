@@ -1,9 +1,13 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Menu\MenuScript.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\City\Initializer\CityInitializer.js">
     <Files>
-      <File FileName="Assets\Menu\MenuScript.js" Line="14" Column="35" />
-      <File FileName="Assets\Scripts\City\Initializer\CityInitializer.js" Line="72" Column="47" />
+      <File FileName="Assets\Scripts\City\Initializer\CityInitializer.js" Line="89" Column="7" />
+      <File FileName="Assets\Scripts\City\XML\City.xml" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\JobSystem\Initializer\Initialization.js" Line="32" Column="20" />
+      <File FileName="Assets\Scripts\JobSystem\Jobs\Fireman.js" Line="4" Column="2" />
+      <File FileName="Assets\Scripts\JobSystem\Superclass\Jobs.js" Line="5" Column="1" />
+      <File FileName="Assets\Scripts\City\Initializer\BuildingScript.js" Line="16" Column="26" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
