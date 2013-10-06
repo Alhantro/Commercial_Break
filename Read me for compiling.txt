@@ -1,0 +1,6 @@
+1. go to globalScript and make sure the mode is on "Compiled"
+2. file -> build -> build it somewhere in a folder (for now the folder Compiled)
+3. copy everything in the Resources folder (from the Assets folder in the project folder)
+4. paste it into "name"_Data folder
+5. copy Scripts to "name"_Data folder as well
+
