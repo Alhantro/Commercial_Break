@@ -4,7 +4,11 @@ public class Fireman extends Jobs
 {
 	override function fillSlots()
 	{
+		
 		//fill slots with correct things according to the difficulty
+		
+		
+		
 		
 		//fill the rest of the slots with bad things
 	}

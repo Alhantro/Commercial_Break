@@ -15,20 +15,33 @@ public class Jobs
 	public function setTexture()
 	{}
 	
+	private function randomCircle(i:int):Vector3{			//spawn the amount in a circle		* on the circle somewhere Vec3*/);
+		var ang = (360 / GameObject.Find("indestructable").GetComponent(globalScript).getAmountBoxes() * i);			//360 degrees / items * itemNumber
+		var radius = 5;						//position of the squares from the center
+		
+		var center : Vector3 = Vector3(0.5, 0.5, 1);
+		var pos : Vector3;		
+		pos.x =	center.x + radius * Mathf.Sin(ang * Mathf.Deg2Rad);
+		pos.y = center.y + radius * Mathf.Cos(ang * Mathf.Deg2Rad);
+		pos.z = center.z;
+		Debug.Log(pos);
+		return pos;
+	}
+	
 	public function createSlots()
 	{
 		//check the amount
 		var amount:int = GameObject.Find("indestructable").GetComponent(globalScript).getAmountBoxes();
 		for(var i:int = 0; i<amount; i++)
 		{
-			//spawn the amount in a circle
-			//var slot:GameObject = Instantiate(Resources.Load("SlotBox", GameObject), /* on the circle somewhere Vec3*/);
-			//name it SlotBox (else it will contain (Clone) in the name;
-			//slot.name = SlotBox;
-			//add as child to SlotContainer
-			//slot.gameObject.transform.parent = GameObject.Find("SlotContainer").transform;
+			var slot:GameObject = GameObject.Instantiate(Resources.Load("SlotBox", GameObject), randomCircle(i), Quaternion.identity);
+			slot.name = "SlotBox"+i;		// name it SlotBox (else it will contain (Clone);
+			
+			slot.gameObject.transform.parent = GameObject.Find("SlotContainer").transform;
+			
 			//put them into a (vector) array
-			//slotBoxArray.push(slot);
+			slotBoxArray.push(slot);		//add as child to SlotContainer
+			//Debug.Log(slotBoxArray);
 		}
 		
 	}
