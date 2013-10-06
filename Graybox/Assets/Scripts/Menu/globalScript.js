@@ -3,7 +3,7 @@
 private var jobString:String = "Fireman";	//change to "" when other jobs are implemented
 private var amount_Correct:int = 3;			//standard correct is 3
 private var amount_Boxes:int = 5;			//standard amount of boxes is 5
-private var mode:String = "Unity";
+private var mode:String = "Compiled";
 //private var mode:String = "Compiled";	//change this when needed
 
 function Awake()
