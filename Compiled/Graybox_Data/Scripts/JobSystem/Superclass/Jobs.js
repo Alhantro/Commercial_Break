@@ -19,7 +19,7 @@ public class Jobs
 		var ang = (360 / GameObject.Find("indestructable").GetComponent(globalScript).getAmountBoxes() * i);			//360 degrees / items * itemNumber
 		var radius = 5;						//position of the squares from the center
 		
-		var center : Vector3 = Vector3(0.5, 0.5, 1);
+		var center : Vector3 = Vector3(0.0, 0.0, 1.0);
 		var pos : Vector3;		
 		pos.x =	center.x + radius * Mathf.Sin(ang * Mathf.Deg2Rad);
 		pos.y = center.y + radius * Mathf.Cos(ang * Mathf.Deg2Rad);
