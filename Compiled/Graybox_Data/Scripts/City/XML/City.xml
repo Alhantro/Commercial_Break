@@ -2,28 +2,28 @@
 	<building>
 		<Name>CleanerBuilding</Name>
 		<JobName>Cleaner</JobName>
-		<TexturePath>City/Textures/CleanerBuilding/cleanerBuilding</TexturePath>
-		<NormalMap>City/Textures/N_Cleanerbuilding/cleanerbuilding</NormalMap>
+		<TexturePath>City/Textures/CleanerBuilding/cleanerBuilding.png</TexturePath>
+		<NormalMap>City/Textures/N_Cleanerbuilding/cleanerbuilding.png</NormalMap>
 	</building>
 	
 	<building>
 		<Name>CopBuilding</Name>
 		<JobName>Cop</JobName>
-		<TexturePath>City/Textures/CopBuilding/copBuilding</TexturePath>
-		<NormalMap>City/Textures/N_CopBuilding/copBuilding</NormalMap>
+		<TexturePath>City/Textures/CopBuilding/copBuilding.png</TexturePath>
+		<NormalMap>City/Textures/N_CopBuilding/copBuilding.png</NormalMap>
 	</building>
 	
 	<building>
 		<Name>FireBuilding</Name>
 		<JobName>Fireman</JobName>
-		<TexturePath>City/Textures/FireBuilding/fireBuilding</TexturePath>
-		<NormalMap>City/Textures/N_FireBuilding/fireBuilding</NormalMap>
+		<TexturePath>City/Textures/FireBuilding/fireBuilding.png</TexturePath>
+		<NormalMap>City/Textures/N_FireBuilding/fireBuilding.png</NormalMap>
 	</building>
 	
 	<building>
 		<Name>GardenBuilding</Name>
 		<JobName>Gardener</JobName>
-		<TexturePath>City/Textures/GardenBuilding/gardenBuilding</TexturePath>
-		<NormalMap>City/Textures/N_GardenBuilding/gardenBuilding</NormalMap>
+		<TexturePath>City/Textures/GardenBuilding/gardenBuilding.png</TexturePath>
+		<NormalMap>City/Textures/N_GardenBuilding/gardenBuilding.png</NormalMap>
 	</building>
 </root>

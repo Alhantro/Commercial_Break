@@ -13,7 +13,7 @@ function Awake()
 	readXML();
 }
 
-private function readXML():void
+private function readXML():IEnumerator
 {
 	//get correct filepath
 	var filePath:String = "";
@@ -25,7 +25,7 @@ private function readXML():void
 	var textureArray:Array = new Array();
 	var buildingArray:Array = new Array();
 	var normalMapArray:Array = new Array();
-
+	
 	//look what mode it is... then set the filePath
 	if(GameObject.Find("indestructable").GetComponent(globalScript).getMode() == "Unity")
 	{
@@ -101,25 +101,67 @@ private function readXML():void
 			{
 				//create new material to work on (bumped diffuse)
 				var material = new Material(Shader.Find("Bumped Diffuse"));
-				//set the main texture of the material
-				material.SetTexture("_MainTex", Resources.Load(textureArray[i] as String, Texture2D));
-				//set the normalmap of the material
-				material.SetTexture("_BumpMap", Resources.Load(normalMapArray[i] as String, Texture2D));
-				//apply the material to the building
-				GameObject.Find(buildingArray[i] as String).renderer.material = material;
-				//apply script to the building and initialize it
-				if(jobNameArray[i] != null)
+				//file strings
+				var file1:String;
+				var file2:String;
+				
+				//if the mode is compiled mode
+				if(GameObject.Find("indestructable").GetComponent(globalScript).getMode() == "Compiled")
 				{
-					GameObject.Find(buildingArray[i] as String).AddComponent(BuildingScript);
-					GameObject.Find(buildingArray[i] as String).GetComponent(BuildingScript).setJobName(jobNameArray[i] as String);
+					//assign the filePath
+					file1 = "file://" + Application.dataPath + "/" + textureArray[i] as String;
+					file2 = "file://" + Application.dataPath + "/" + normalMapArray[i] as String;
+					GameObject.Find("indestructable").GetComponent(globalScript).addToDebug(file1);
 				}
+				else
+				{
+					//assign filepath
+					file1 = "file://" + Application.dataPath + "/Resources/" + textureArray[i] as String;
+					file2 = "file://" + Application.dataPath + "/Resources/" + normalMapArray[i] as String;
+					GameObject.Find("indestructable").GetComponent(globalScript).addToDebug("executed while compiled");
+				}
+				
+				//www loading
+				var wwwMainTex = new WWW(file1);	//download my 1st file
+				//loading the texture takes time so wait for it till its done if it isn't already
+				if(wwwMainTex.isDone == false)
+				{
+					yield wwwMainTex;	//wait till its done
+				}
+				
+				var wwwNormalTex = new WWW(file2);	//download my 2nd file
+				
+				if(wwwNormalTex.isDone == false)
+				{
+					yield wwwNormalTex;	//wait till its done
+				}
+				
+				
+				//if the textures are done downloading
+				if(wwwMainTex.isDone && wwwNormalTex.isDone)
+				{
+					//set the main texture of the material
+					material.SetTexture("_MainTex", wwwMainTex.texture);
+					//set the normalmap of the material
+					material.SetTexture("_BumpMap", wwwNormalTex.texture);
+					
+					//apply the material to the building
+					GameObject.Find(buildingArray[i] as String).renderer.material = material;
+					//apply script to the building and initialize it
+					if(jobNameArray[i] != null)
+					{
+						GameObject.Find(buildingArray[i] as String).AddComponent(BuildingScript);
+						GameObject.Find(buildingArray[i] as String).GetComponent(BuildingScript).setJobName(jobNameArray[i] as String);
+					}
+				}
+				else Debug.LogError("something went wrong with loading wwwMainTex or wwwNormalTex");
 			}
 			else 
 			{
 				Debug.LogError("Either the buildingArray, textureArray or normalMapArray has failed to load...");
 				Debug.Log(buildingArray[i]);
 				Debug.Log(textureArray[i]);
-				Debug.Log("breaking the operation");
+				Debug.LogError("breaking the operation");
 				break;
 			}
 		}

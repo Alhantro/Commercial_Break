@@ -20,6 +20,9 @@ public class Jobs
 		var radius = 5;						//position of the squares from the center
 		
 		var center : Vector3 = Vector3(0.0, 0.0, 1.0);
+		center.x = GameObject.Find("Environment").transform.FindChild("Main Camera").transform.position.x;
+		center.y = GameObject.Find("Environment").transform.FindChild("Main Camera").transform.position.y;	
+		
 		var pos : Vector3;		
 		pos.x =	center.x + radius * Mathf.Sin(ang * Mathf.Deg2Rad);
 		pos.y = center.y + radius * Mathf.Cos(ang * Mathf.Deg2Rad);
