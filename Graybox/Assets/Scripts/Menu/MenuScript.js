@@ -14,6 +14,7 @@ function OnGUI() {
 	
 	if(GUI.Button(Rect((Screen.width / 2 - m_ratiox /2), (Screen.height / 2 - m_ratioy /2), m_ratiox, m_ratioy), "Start")) {
 		Application.LoadLevel("CityScene");
+		GameObject.Find("indestructable").GetComponent(globalScript).enableIngameMenu();
 		GameObject.Find("indestructable").GetComponent(globalScript).setAmountBoxes(m_BoxesValue);
 		GameObject.Find("indestructable").GetComponent(globalScript).setAmountCorrect(m_CorrectBoxesValue);
 	}

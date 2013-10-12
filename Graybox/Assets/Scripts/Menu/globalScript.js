@@ -6,6 +6,8 @@ private var amount_Boxes:int = 5;			//standard amount of boxes is 5
 private var mode:String = "Unity";		//"Compiled" or "Unity"
 private var debugMode:boolean = false;		//debug mode for compiled version
 private var debug:String = "This is the Debugger";
+private var ingameMenu:boolean = false;
+private var showMenu:boolean = false;
 
 function Awake()
 {
@@ -18,11 +20,46 @@ function OnGUI()
 	{
 		GUI.Label(Rect(0,0, 300, Screen.width), debug);
 	}
+	
+	//if you press escape show the menu
+	if(Input.GetKeyUp("escape") && ingameMenu == true && showMenu == false)
+	{
+		showMenu = true;
+	}
+	
+	//show the menu
+	if(ingameMenu == true && showMenu == true)
+	{
+		//resume button
+		if(GUI.Button(Rect(Screen.width / 2 - 50, (Screen.height /2) - 50, 100, 25),"Doorgaan"))
+		{
+			showMenu = false;
+		}
+		//quit button
+		if(GUI.Button(Rect(Screen.width / 2 - 100, (Screen.height /2) , 200, 25),"Terug naar het hoofdmenu"))
+		{
+			disableIngameMenu();
+			showMenu = false;
+			Application.LoadLevel("MenuScene");
+		}
+	}
+	
+
 }
 
 //
 //	Setters
 //
+public function enableIngameMenu()
+{
+	ingameMenu = true;
+}
+
+public function disableIngameMenu()
+{
+	ingameMenu = false;
+}
+
 public function addToDebug(message:String):void
 {
 	//debug = debug + "\n" + message;
