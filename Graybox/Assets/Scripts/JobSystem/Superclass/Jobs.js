@@ -27,7 +27,7 @@ public class Jobs
 		pos.x =	center.x + radius * Mathf.Sin(ang * Mathf.Deg2Rad);
 		pos.y = center.y + radius * Mathf.Cos(ang * Mathf.Deg2Rad);
 		pos.z = center.z;
-		Debug.Log(pos);
+//		Debug.Log(pos);
 		return pos;
 	}
 	
@@ -39,7 +39,7 @@ public class Jobs
 		{
 			var slot:GameObject = GameObject.Instantiate(Resources.Load("SlotBox", GameObject), randomCircle(i), Quaternion.identity);
 			slot.name = "SlotBox"+i;		// name it SlotBox (else it will contain (Clone);
-			
+			slot.AddComponent(slotBoxScript);
 			slot.gameObject.transform.parent = GameObject.Find("SlotContainer").transform;
 			
 			//put them into a (vector) array
@@ -50,10 +50,89 @@ public class Jobs
 	}
 	
 	public function fillSlots()
-	{}
+	{
+		//amount of boxes
+		var amountOfBoxes = GameObject.Find("indestructable").GetComponent(globalScript).getAmountBoxes();
+		//amount of correct boxes
+		var amountCorrect = GameObject.Find("indestructable").GetComponent(globalScript).getAmountCorrect();
+		//number
+		var boxesLeft:int = amountOfBoxes;
+		//counter
+		var correctLeft:int = amountCorrect;
+		//random number
+		var randomNumber:int;
+		var correctNumber:int;
+		
+		for(var i=0; i<amountOfBoxes; i++)
+		{
+			randomNumber = Mathf.Floor(Random.value * 100);
+			correctNumber = ((correctLeft * 100) / boxesLeft);
+			var box:GameObject = slotBoxArray[i];
+			
+			if(correctLeft != 0)
+			{
+				if(randomNumber < correctNumber)
+				{
+					//correct box
+					box.GetComponent(slotBoxScript).setCorrect();
+					//set correct texture
+					fillCorrect(box);
+					
+					//correct boxes left -1
+					correctLeft --;
+					//boxes left -1
+					boxesLeft --;
+				}
+				else
+				{
+					//false box
+					box.GetComponent(slotBoxScript).setFalse();
+					//set false texture
+					fillFalse(box);
+					//boxes left -1
+					boxesLeft --;
+				}
+			}
+			else
+			{
+				//false box
+				box.GetComponent(slotBoxScript).setFalse();
+				//set false texture
+				fillFalse(box);
+				//boxes left
+				boxesLeft --;
+			}
+		}
+		
+	}
 
 	public function endGame()
 	{}
+	
+	private function fillCorrect(box:GameObject):void
+	{
+		var assetArray:Array = GameObject.Find("JobInitializer").GetComponent(Initialization).getAssetArray();
+		var jobName:String = GameObject.Find("indestructable").GetComponent(globalScript).getJobName();
+		for(var i:int=0; i<assetArray.length; i++)
+		{
+			var texture:Texture2D = assetArray[i] as Texture2D;
+			//Debug.Log(texture);
+			//Debug.Log("texturename: " + texture.name);
+			
+			box.GetComponent(slotBoxScript).setTexture(texture);
+			
+			if(texture.name.Contains(jobName))
+			{
+				
+			}
+		}
+	}
+	
+	private function fillFalse(box:GameObject):void
+	{
+		var assetArray:Array = GameObject.Find("JobInitializer").GetComponent(Initialization).getAssetArray();
+		
+	}
 
 }
 

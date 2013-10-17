@@ -2,17 +2,6 @@
 
 public class Fireman extends Jobs
 {
-	override function fillSlots()
-	{
-		
-		//fill slots with correct things according to the difficulty
-		
-		
-		
-		
-		//fill the rest of the slots with bad things
-	}
-	
 	override function setTexture()
 	{
 		var texture:Texture2D = Resources.Load("Fireman", Texture2D);
