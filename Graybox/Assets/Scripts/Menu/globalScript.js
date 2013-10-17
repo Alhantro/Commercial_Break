@@ -3,7 +3,7 @@
 private var jobString:String = "Fireman";	//change to "" when other jobs are implemented
 private var amount_Correct:int = 3;			//standard correct is 3
 private var amount_Boxes:int = 5;			//standard amount of boxes is 5
-private var mode:String = "Unity";		//"Compiled" or "Unity"
+private var mode:String = "Compiled";		//"Compiled" or "Unity"
 private var debugMode:boolean = false;		//debug mode for compiled version
 private var debug:String = "This is the Debugger";
 private var ingameMenu:boolean = false;

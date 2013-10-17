@@ -1,10 +1,11 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\SoundSystem\SoundPlayer.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Menu\MenuScript.js">
     <Files>
-      <File FileName="Assets\Scripts\SoundSystem\SoundPlayer.js" Line="50" Column="2" />
-      <File FileName="Assets\Scripts\City\Initializer\CityInitializer.js" Line="109" Column="78" />
-      <File FileName="Assets\Scripts\Menu\globalScript.js" Line="6" Column="33" />
+      <File FileName="Assets\Scripts\Menu\MenuScript.js" Line="7" Column="2" />
+      <File FileName="Assets\Scripts\City\Initializer\CityInitializer.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Menu\globalScript.js" Line="1" Column="1" />
+      <File FileName="Assets\Editor\PostBuild.js" Line="5" Column="24" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
