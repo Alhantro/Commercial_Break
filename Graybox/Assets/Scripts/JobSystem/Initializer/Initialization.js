@@ -4,10 +4,14 @@ import System.IO;
 
 private var job:Jobs;
 
-//fireman
+//list of assets
 private var assetsArray:Array = new Array();
-private var assetName:Array = new Array();
+private var assetNameArray:Array = new Array();
 
+//list of false assets
+var falseAssetArray:Array = new Array();
+//names of false assets
+var falseAssetNameArray:Array = new Array();
 
 function Awake()
 {
@@ -55,11 +59,12 @@ private function loadAssets()
 		yield wwwPNG;
 		//push it into the array
 		assetsArray.push(wwwPNG.texture);
-		assetName.push(getFileName(file));
+		assetNameArray.push(getFileName(file));
 		//Debug.Log("File: " + file);
 		//Debug.Log("getting back as name: " + getFileName(file));
 	}
 	//load the rest of the assets
+	buildFalseArray();
 	job.setTexture();
 	job.createSlots();
 	job.fillSlots();
@@ -89,6 +94,27 @@ private function getFileName(file:String):String
 	return result;
 }
 
+private function buildFalseArray()
+{
+	for(var i=0; i<assetNameArray.length; i++)
+	{
+		var name:String = assetNameArray[i] as String;
+		if(name.Contains(GameObject.Find("indestructable").GetComponent(globalScript).getJobName()) == false)
+		{
+			//copy the asset from the array to the false list
+			falseAssetArray.push(assetsArray[i]);
+			//copy the name of the asset from the array to the false list
+			falseAssetNameArray.push(assetNameArray[i]);
+		}
+	}
+}
+
+public function removeFromFalseArray(value:int)
+{
+	falseAssetArray.RemoveAt(value);
+	falseAssetNameArray.RemoveAt(value);
+}
+
 public function getAssetArray():Array
 {
 	return assetsArray;
@@ -96,5 +122,15 @@ public function getAssetArray():Array
 
 public function getAssetNameArray():Array
 {
-	return assetName;
+	return assetNameArray;
+}
+
+public function getFalseAssetArray():Array
+{
+	return falseAssetArray;
+}
+
+public function getFalseAssetNameArray():Array
+{
+	return falseAssetNameArray;
 }

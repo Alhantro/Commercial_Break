@@ -143,10 +143,29 @@ public class Jobs
 	
 	private function fillFalse(box:GameObject):void
 	{
-		var assetArray:Array = GameObject.Find("JobInitializer").GetComponent(Initialization).getAssetArray();
+		//the texture assets
+		var falseAssetArray:Array = GameObject.Find("JobInitializer").GetComponent(Initialization).getFalseAssetArray();
+		//the name of the png file
+		var falseAssetNameArray:Array = GameObject.Find("JobInitializer").GetComponent(Initialization).getFalseAssetNameArray();
+		//there is a false texture available so do the while loop
+		if(falseAssetArray.length != 0)
+		{
+			var randomNumber:int = Random.Range(0, falseAssetArray.length); 
 		
+			//get random texture
+			var texture:Texture2D = falseAssetArray[randomNumber] as Texture2D;
+			var textureName:String = falseAssetNameArray[randomNumber] as String;
+				
+			box.GetComponent(slotBoxScript).setTexture(texture);
+			falseAssetArray.RemoveAt(randomNumber);
+			falseAssetNameArray.RemoveAt(randomNumber);
+		}
+		else
+		{
+			Debug.LogError("Not enough false textures to load");
+			GameObject.Find("indestructable").GetComponent(globalScript).addToDebug("Not enough false textures to load");
+		}
 	}
-
 }
 
 
