@@ -56,7 +56,7 @@ private function loadAssets()
 		//push it into the array
 		assetsArray.push(wwwPNG.texture);
 		assetName.push(getFileName(file));
-		Debug.Log(assetName[0]);
+		//Debug.Log(assetName[0]);
 	}
 	//load the rest of the assets
 	job.setTexture();
@@ -66,8 +66,26 @@ private function loadAssets()
 
 private function getFileName(file:String):String
 {
-	var result:String = file;
+	var result:String;
 	
+	var a_Split:Array = file.Split( "/"[0] );		// First split at each "/"
+	var t_string:String;							// Second Array, containing JobTexures folder + subfolders
+
+	var f_Split:Array;		// Second Split at each "\"    _<-- Had to use "&" in this example (or another symbol)
+
+	//Debug.Log( file );
+	//Debug.Log( file.Length );
+	//Debug.Log( a_Split.length );
+	
+	t_string = a_Split[a_Split.length - 1];		//setting first splitted string cut off at texture folder
+		//Debug.Log( t_string );
+	
+	f_Split = t_string.Split( "\\"[0] );			//getting the second array with all texture folders and texures
+		//Debug.Log( f_Split.length );
+	
+	result = f_Split[f_Split.length - 1]; 	//Getting the final string with the png name
+		Debug.Log(result);
+
 	return result;
 }
 
