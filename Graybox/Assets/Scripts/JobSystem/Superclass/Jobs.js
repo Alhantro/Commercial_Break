@@ -67,7 +67,7 @@ public class Jobs
 		{
 			randomNumber = Mathf.Floor(Random.value * 100);
 			correctNumber = ((correctLeft * 100) / boxesLeft);
-			var box:GameObject = slotBoxArray[i];
+			var box:GameObject = slotBoxArray[i] as GameObject;
 			
 			if(correctLeft != 0)
 			{
@@ -111,20 +111,33 @@ public class Jobs
 	
 	private function fillCorrect(box:GameObject):void
 	{
+		//the texture assets
 		var assetArray:Array = GameObject.Find("JobInitializer").GetComponent(Initialization).getAssetArray();
+		//the name of the png file
+		var assetNameArray:Array = GameObject.Find("JobInitializer").GetComponent(Initialization).getAssetNameArray();
+		//the job name
 		var jobName:String = GameObject.Find("indestructable").GetComponent(globalScript).getJobName();
+		
 		for(var i:int=0; i<assetArray.length; i++)
 		{
+			//get the texture
 			var texture:Texture2D = assetArray[i] as Texture2D;
-			//Debug.Log(texture);
-			//Debug.Log("texturename: " + texture.name);
-			
-			box.GetComponent(slotBoxScript).setTexture(texture);
-			
-			if(texture.name.Contains(jobName))
+			var textureName:String = assetNameArray[i] as String;
+			//if the name of the texture contains
+			if(textureName.Contains(jobName))
 			{
-				
+				box.GetComponent(slotBoxScript).setTexture(texture);
+				assetArray.RemoveAt(i);
+				assetNameArray.RemoveAt(i);
+				//found the texture so break it cause ur done
+				break;
 			}
+		}
+		
+		if(box.GetComponent(slotBoxScript).getTexture() == null)
+		{
+			Debug.LogError("missing correct texture");
+			GameObject.Find("indestructable").GetComponent(globalScript).addToDebug("Missing correct texture!");
 		}
 	}
 	

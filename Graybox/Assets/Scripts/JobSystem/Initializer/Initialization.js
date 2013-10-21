@@ -56,7 +56,8 @@ private function loadAssets()
 		//push it into the array
 		assetsArray.push(wwwPNG.texture);
 		assetName.push(getFileName(file));
-		//Debug.Log(assetName[0]);
+		//Debug.Log("File: " + file);
+		//Debug.Log("getting back as name: " + getFileName(file));
 	}
 	//load the rest of the assets
 	job.setTexture();
@@ -77,14 +78,13 @@ private function getFileName(file:String):String
 	//Debug.Log( file.Length );
 	//Debug.Log( a_Split.length );
 	
-	t_string = a_Split[a_Split.length - 1];		//setting first splitted string cut off at texture folder
+	t_string = a_Split[a_Split.length - 1] as String;		//setting first splitted string cut off at texture folder
 		//Debug.Log( t_string );
 	
 	f_Split = t_string.Split( "\\"[0] );			//getting the second array with all texture folders and texures
 		//Debug.Log( f_Split.length );
 	
-	result = f_Split[f_Split.length - 1]; 	//Getting the final string with the png name
-		Debug.Log(result);
+	result = f_Split[f_Split.length - 1] as String; 	//Getting the final string with the png name
 
 	return result;
 }
@@ -92,4 +92,9 @@ private function getFileName(file:String):String
 public function getAssetArray():Array
 {
 	return assetsArray;
+}
+
+public function getAssetNameArray():Array
+{
+	return assetName;
 }

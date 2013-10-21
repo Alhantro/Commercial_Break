@@ -14,6 +14,11 @@ public function setFalse():void
 
 public function setTexture(texture:Texture2D):void
 {
-	Debug.Log("texture setter");
+	//Debug.Log("texture setter");
 	this.renderer.material.mainTexture = texture;
+}
+
+public function getTexture():Texture2D
+{
+	return this.renderer.material.mainTexture as Texture2D;
 }
