@@ -4,14 +4,24 @@ private var jobString:String = "";			//change to "" when other jobs are implemen
 private var amount_Correct:int = 3;			//standard correct is 3
 private var amount_Boxes:int = 5;			//standard amount of boxes is 5
 private var mode:String = "Compiled";		//"Compiled" or "Unity"
-private var debugMode:boolean = true;		//debug mode for compiled version
+private var debugMode:boolean = false;		//debug mode for compiled version
 private var debug:String = "This is the Debugger";
 private var ingameMenu:boolean = false;
 private var showMenu:boolean = false;
+static var createdIndestructable:boolean = false;	//if it is already created then its true
 
 function Awake()
 {
-	DontDestroyOnLoad(this.gameObject);		//make sure this object is not destroyed on load!
+	//if indestructale isn't created yet... create it
+	if(!createdIndestructable)
+	{
+		DontDestroyOnLoad(this.gameObject);		//make sure this object is not destroyed on load!
+		createdIndestructable = true;			//first creation of indestructable
+	}
+	else	//indestructable is created so there is a double.. destroy it
+	{
+		Destroy(this.gameObject);
+	}
 }
 
 function OnGUI()
