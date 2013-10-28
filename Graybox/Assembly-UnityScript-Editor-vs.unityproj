@@ -44,7 +44,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Editor\PostBuild.js" />
+     <Compile Include="Assets\Scripts\Editor\PostBuild.js" />
      <None Include="Assets\Scripts\City\XML\City.xml" />
  <Reference Include="Assembly-UnityScript">
  <HintPath>Library\ScriptAssemblies\Assembly-UnityScript.dll</HintPath>
