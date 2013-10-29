@@ -15,32 +15,32 @@ function Awake()
 
 function OnGUI()
 {
-	if(GUI.Button(Rect(Screen.width / 10, Screen.height / 10, 100, 100),"Fireman"))
+	if(GUI.Button(Rect(Screen.width / 10, Screen.height / 10, 100, 100),"Brandweer"))
 	{
 		GameObject.Find("indestructable").GetComponent(globalScript).setJob("Fireman");
 		startGame();
 	}
-	if(GUI.Button(Rect(Screen.width / 10 + 110, Screen.height / 10, 100, 100),"Army"))
+	if(GUI.Button(Rect(Screen.width / 10 + 110, Screen.height / 10, 100, 100),"Leger"))
 	{
 		GameObject.Find("indestructable").GetComponent(globalScript).setJob("Army");
 		startGame();
 	}
-	if(GUI.Button(Rect(Screen.width / 10 + 220, Screen.height / 10, 100, 100),"Cleaner"))
+	if(GUI.Button(Rect(Screen.width / 10 + 220, Screen.height / 10, 100, 100),"Schoonmaker"))
 	{
 		GameObject.Find("indestructable").GetComponent(globalScript).setJob("Cleaner");
 		startGame();
 	}
-	if(GUI.Button(Rect(Screen.width / 10 + 330, Screen.height / 10, 100, 100),"Nurse"))
+	if(GUI.Button(Rect(Screen.width / 10 + 330, Screen.height / 10, 100, 100),"Verpleegster"))
 	{
 		GameObject.Find("indestructable").GetComponent(globalScript).setJob("Nurse");
 		startGame();
 	}
-	if(GUI.Button(Rect(Screen.width / 10 + 440, Screen.height / 10, 100, 100),"Policeman"))
+	if(GUI.Button(Rect(Screen.width / 10 + 440, Screen.height / 10, 100, 100),"Politie"))
 	{
 		GameObject.Find("indestructable").GetComponent(globalScript).setJob("Policeman");
 		startGame();
 	}
-	if(GUI.Button(Rect(Screen.width / 10 + 550, Screen.height / 10, 100, 100),"Secretary"))
+	if(GUI.Button(Rect(Screen.width / 10 + 550, Screen.height / 10, 100, 100),"Receptioniste"))
 	{
 		GameObject.Find("indestructable").GetComponent(globalScript).setJob("Secretary");
 		startGame();
