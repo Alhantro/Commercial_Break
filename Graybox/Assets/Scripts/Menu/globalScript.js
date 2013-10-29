@@ -11,6 +11,7 @@ private var ingameMenu:boolean = false;
 private var showMenu:boolean = false;
 private var state:String = "Menu";
 static var createdIndestructable:boolean = false;	//if it is already created then its true
+private var handPosition:Vector3;			//Hand Cursor
 
 function Awake()
 {
@@ -116,6 +117,11 @@ public function setAmountBoxes(value:int)
 	amount_Boxes = value;
 }
 
+public function setHand(pos:Vector3)
+{
+	handPosition = pos;
+}
+
 //
 //	Getters
 //
@@ -139,4 +145,9 @@ public function getAmountBoxes():int
 public function getMode():String
 {
 	return mode;
+}
+
+public function getHand():Vector3
+{
+	return handPosition;
 }

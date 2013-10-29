@@ -7,6 +7,7 @@ private var position : Vector3;
 private var midScreen : Vector3 = Vector3(Screen.width/2,Screen.height/2,0);
 
 private var handPosition : Vector3;
+private var finalPos : Vector3;
 
 function Start ()
 {
@@ -18,7 +19,12 @@ function Update ()
 	//Debug.Log(position);
 	handPosition = scalePosition(midScreen, position);
 	
+	finalPos.x = handPosition.x;
+	finalPos.y = (Screen.height - handPosition.y);
+	finalPos.z = handPosition.z;
 	
+	GameObject.Find("indestructable").GetComponent(globalScript).setHand(finalPos);
+	//Debug.Log(GameObject.Find("indestructable").GetComponent(globalScript).getHand());
 }
 
 function OnGUI()
