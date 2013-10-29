@@ -24,9 +24,10 @@ public class Jobs
 			//new WWW download
 			var wwwBackground = new WWW("file://"+filePath);
 			
+			texture = wwwBackground.texture;
+			
 			if(wwwBackground.isDone)
-			{
-				texture = wwwBackground.texture;
+			{	
 				if(texture != null)
 				{
 					GameObject.Find("Background Image").GetComponent(setBackgroundTexture).setTexture(texture);
