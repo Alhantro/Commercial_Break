@@ -16,10 +16,12 @@ function OnGUI() {
 	if (m_menuMode == 0) {
 		if(GUI.Button(Rect((Screen.width / 2 - m_ratiox /2), (Screen.height / 2 - m_ratioy /2 - m_ratioy * 3), m_ratiox, m_ratioy * 2), "Start")) {
 			m_menuMode = 2;
+			GameObject.Find("indestructable").GetComponent(globalScript).setState("Start");
 		}
 		
 		if (GUI.Button(Rect((Screen.width / 2 - m_ratiox /2), (Screen.height / 2 - m_ratioy /2 ), m_ratiox, m_ratioy * 2), "Settings")) {
 			m_menuMode = 1;
+			GameObject.Find("indestructable").GetComponent(globalScript).setState("Settings");
 		}
 		if (GUI.Button(Rect((Screen.width / 2 - m_ratiox /2), (Screen.height / 2 - m_ratioy /2 + m_ratioy * 3), m_ratiox, m_ratioy * 2), "Exit Game")) {
 			Application.Quit();
@@ -36,6 +38,7 @@ function OnGUI() {
 		}
 		if(GUI.Button(Rect((Screen.width / 2 - m_ratiox /2), (Screen.height / 2 - m_ratioy /2 + m_ratioy * 7), m_ratiox, m_ratioy* 2), "Back")) {
 			m_menuMode = 0;
+			GameObject.Find("indestructable").GetComponent(globalScript).setState("Menu");
 			return;
 		}
 	}
@@ -60,6 +63,7 @@ function OnGUI() {
 		}
 		if(GUI.Button(Rect((Screen.width / 2 - m_ratiox /2), (Screen.height / 2 - m_ratioy /2 + m_ratioy * 7), m_ratiox, m_ratioy* 2), "Back")) {
 			m_menuMode = 0;
+			GameObject.Find("indestructable").GetComponent(globalScript).setState("Menu");
 			return;
 		}
 	}

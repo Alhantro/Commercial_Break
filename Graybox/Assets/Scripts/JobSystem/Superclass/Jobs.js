@@ -1,7 +1,7 @@
 #pragma strict
 
 //import System.Xml;
-//import System.IO;
+import System.IO;
 
 public class Jobs
 {
@@ -10,22 +10,38 @@ public class Jobs
 	protected var slotBoxArray:Array = new Array();
 
 	public function Jobs()
-	{
-		GameObject.Find("indestructable").GetComponent(globalScript).addToDebug("Creating Jobs Class");
-	}
+	{}
 	
 	public function setTexture()
 	{
 		var jobName:String = GameObject.Find("indestructable").GetComponent(globalScript).getJobName();
-		var texture:Texture2D = Resources.Load(jobName, Texture2D);
-		if(texture != null)
+		var texture:Texture2D;// = Resources.Load(jobName, Texture2D);
+		
+		var filePath:String = Application.dataPath + "/JobBackgrounds/" + jobName + ".png";
+		
+		if(File.Exists(filePath))
 		{
-			GameObject.Find("Background Image").GetComponent(setBackgroundTexture).setTexture(texture);
+			//new WWW download
+			var wwwBackground = new WWW("file://"+filePath);
+			
+			if(wwwBackground.isDone)
+			{
+				texture = wwwBackground.texture;
+				if(texture != null)
+				{
+					GameObject.Find("Background Image").GetComponent(setBackgroundTexture).setTexture(texture);
+				}
+				else 
+				{
+					GameObject.Find("indestructable").GetComponent(globalScript).addToDebug("Can't set background image for the job cause it's null");
+					Debug.LogError("Can't set background image for the job cause it's null");
+				}
+			}
 		}
-		else 
+		else
 		{
-			GameObject.Find("indestructable").GetComponent(globalScript).addToDebug("Can't set background image for the job cause it's null");
-			Debug.LogError("Can't set background image for the job cause it's null");
+			GameObject.Find("indestructable").GetComponent(globalScript).addToDebug("File niet gevonden");
+			Debug.LogError("File doesn't exist");
 		}
 	}
 	
