@@ -12,6 +12,11 @@ private var finalHandPos : Vector3;
 
 private var jobScene:boolean = false;
 
+private var timer:float;
+private var seconds:float;
+
+private var lastHit : String;
+
 function Start ()
 {
 }
@@ -50,12 +55,38 @@ function Update ()
 	if(jobScene == true)
 	{
 		if(Physics.Raycast(ray, hit, 20.0)){
-			Debug.Log(hit.collider.name);
+			//Debug.Log(hit.collider.name);
+			//Debug.Log("lastHit " + lastHit);
+			
+			if(lastHit != hit.collider.name){
+				lastHit = hit.collider.name;
+				seconds = 0;
+				timer = 0;
+			}
+			
+			//if it hits an slotbox.. start timer
+			if(lastHit == hit.collider.name)
+			{
+				if(seconds == 3){
+					seconds = 0;
+					timer = 0;
+					GameObject.Find(hit.collider.name).GetComponent(slotBoxScript).OnMouseUp();	// Mouse up event here
+				} 
+				else increaseTimer();
+			}
 		}
 		
 		Debug.DrawLine (ray.origin, hit.point, Color.green);
-		
 	}	
+}
+
+private function increaseTimer()
+{
+	timer += Time.deltaTime;
+	
+	seconds = Mathf.RoundToInt(timer%60);
+	
+	Debug.Log(seconds);
 }
 
 function OnGUI()
