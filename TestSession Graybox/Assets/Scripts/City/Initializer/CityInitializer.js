@@ -6,6 +6,20 @@ import System.IO;	//needed for File IO (example: File.Exists)
 private var textStyle:GUIStyle = new GUIStyle();
 public var buttonTexture:Texture2D[];
 
+private var fireB : Rect = Rect(Screen.width / 10, Screen.height / 10, 100, 100);
+private var armyB : Rect = Rect(Screen.width / 10 + 110, Screen.height / 10, 100, 100);
+private var marineB : Rect = Rect(Screen.width / 10 + 220, Screen.height / 10, 100, 100);
+private var nurseB : Rect = Rect(Screen.width / 10 + 330, Screen.height / 10, 100, 100);
+private var policeB : Rect = Rect(Screen.width / 10 + 440, Screen.height / 10, 100, 100);
+
+private var rectArray : Array = new Array();
+private var rectBoolArray : Array = new Array();
+
+private var timer:float;
+private var seconds:float;
+
+private var handPos : Vector3;
+
 function Awake()
 {
 	textStyle.fontSize = 24;
@@ -16,35 +30,124 @@ function Awake()
 //	City.name = "City";
 //	//read the XML to texture our city
 //	readXML();
+
+	rectArray.Push(fireB, armyB, marineB, nurseB, policeB);		//Add rectangles here
+
+	for(var i=0; i<rectArray.length; i++)
+	{
+		rectBoolArray.Push(false);
+	}
+	
+}
+
+
+function Update()
+{
+	handPos = GameObject.Find("indestructable").GetComponent(globalScript).getHand();
+	
+	checkRectangles();
+	
+	
+	if(checkInButton(fireB)) fireman();
+	if(checkInButton(armyB)) army();
+	if(checkInButton(marineB)) marine();
+	if(checkInButton(nurseB)) nurse();
+	if(checkInButton(policeB)) police();
+	
+	Debug.Log(seconds);
+}
+
+private function checkInButton(rect:Rect):boolean
+{
+	if(rect.Contains(handPos))
+	{
+		if(seconds == 3){
+			seconds = 0;
+			timer = 0;
+			return true;
+		} 
+		else increaseTimer();
+	}
+	else return false;
+}
+
+private function increaseTimer()
+{
+	timer += Time.deltaTime;
+	
+	seconds = Mathf.RoundToInt(timer%60);
+}
+
+private function checkRectangles():void
+{
+	for(var i = 0; i<rectArray.length; i++)
+	{
+		var rectangle : Rect = rectArray[i];
+		if(rectangle.Contains(handPos))
+		{
+			rectBoolArray[i] = true;
+		}
+		else
+		{
+			rectBoolArray[i] = false;
+		}
+	}
+	var check:boolean = false;
+	for(var j=0; j<rectBoolArray.length; j++)
+	{
+		
+		if(rectBoolArray[j] == true)
+		{
+			check = true;
+		}
+	}
+	
+	//Debug.Log(check);
+	
+	if(check == false)
+	{
+		seconds = 0;
+		timer = 0;
+	}
+}
+
+private function fireman()
+{
+	GameObject.Find("indestructable").GetComponent(globalScript).setJob("Fireman");
+	startGame();
+}
+
+private function army()
+{
+	GameObject.Find("indestructable").GetComponent(globalScript).setJob("Army");
+	startGame();
+}
+
+private function marine()
+{
+	GameObject.Find("indestructable").GetComponent(globalScript).setJob("Marine");
+	startGame();
+}
+
+private function nurse()
+{
+	GameObject.Find("indestructable").GetComponent(globalScript).setJob("Nurse");
+	startGame();
+}
+
+private function police()
+{
+	GameObject.Find("indestructable").GetComponent(globalScript).setJob("Policeman");
+	startGame();
 }
 
 function OnGUI()
 {
-	if(GUI.Button(Rect(Screen.width / 10, Screen.height / 10, 100, 100),"Brandweer"))
-	{
-		GameObject.Find("indestructable").GetComponent(globalScript).setJob("Fireman");
-		startGame();
-	}
-	if(GUI.Button(Rect(Screen.width / 10 + 110, Screen.height / 10, 100, 100),"Leger"))
-	{
-		GameObject.Find("indestructable").GetComponent(globalScript).setJob("Army");
-		startGame();
-	}
-	if(GUI.Button(Rect(Screen.width / 10 + 220, Screen.height / 10, 100, 100),"Marinier"))
-	{
-		GameObject.Find("indestructable").GetComponent(globalScript).setJob("Marine");
-		startGame();
-	}
-	if(GUI.Button(Rect(Screen.width / 10 + 330, Screen.height / 10, 100, 100),"Verpleegster"))
-	{
-		GameObject.Find("indestructable").GetComponent(globalScript).setJob("Nurse");
-		startGame();
-	}
-	if(GUI.Button(Rect(Screen.width / 10 + 440, Screen.height / 10, 100, 100),"Politie"))
-	{
-		GameObject.Find("indestructable").GetComponent(globalScript).setJob("Policeman");
-		startGame();
-	}
+	if(GUI.Button(fireB,"Brandweer")) fireman();
+	if(GUI.Button(armyB,"Leger")) army();
+	if(GUI.Button(marineB,"Marinier")) marine();
+	if(GUI.Button(nurseB,"Verpleegster")) nurse(); 
+	if(GUI.Button(policeB,"Politie")) police();
 	
 	GUI.Label(Rect(20, 20, Screen.width, 100), "Kies hier je baan", textStyle);
 
