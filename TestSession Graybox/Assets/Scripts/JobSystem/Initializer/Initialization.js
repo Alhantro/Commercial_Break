@@ -15,6 +15,8 @@ var falseAssetNameArray:Array = new Array();
 
 function Awake()
 {
+
+	GameObject.Find("indestructable").GetComponent(globalScript).setJobSceneBool(true);			//Set false in jobscore after completing job
 //	if(GameObject.Find("indestructable").GetComponent(globalScript).getJobName() == "Fireman")			//Fireman
 //	{
 //		job = new Fireman();

@@ -45,7 +45,7 @@ function OnGUI()
 		GUI.Button (Rect ((Screen.width / 2 - 300), (Screen.height / 2 - 250), 600, 400), endString);
 		if(GUI.Button(Rect((Screen.width / 2 - 100), (Screen.height / 2 + 150), 400, 75) , "Klik hier om door te gaan naar een andere baan"))
 		{
-			
+			GameObject.Find("indestructable").GetComponent(globalScript).setJobSceneBool(false);
 			Application.LoadLevel("CityScene");
 		}
 	}

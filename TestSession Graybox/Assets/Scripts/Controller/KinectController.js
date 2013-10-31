@@ -8,6 +8,9 @@ private var midScreen : Vector3 = Vector3(Screen.width/2,Screen.height/2,0);
 
 private var handPosition : Vector3;
 private var finalPos : Vector3;
+private var finalHandPos : Vector3;
+
+private var jobScene:boolean = false;
 
 function Start ()
 {
@@ -15,7 +18,12 @@ function Start ()
 
 function Update ()
 {
+	jobScene = GameObject.Find("indestructable").GetComponent(globalScript).getJobSceneBool();
+	
+	//Debug.Log(jobScene);
+	
 	position = Camera.main.WorldToScreenPoint(rightHand.transform.position);
+	
 	//Debug.Log(position);
 	handPosition = scalePosition(midScreen, position);
 	
@@ -23,10 +31,31 @@ function Update ()
 	finalPos.y = (Screen.height - handPosition.y - 32.0);
 	finalPos.z = handPosition.z;
 	
-	//GameObject.Find("indestructable").GetComponent(globalScript).setHand(finalPos);			//Activate this one for kinect controls
+	//print(Input.mousePosition.y + "   -   " + (Screen.height - Input.mousePosition.y));
+	
+	//finalHandPos = finalPos;	//With Kinect
+	finalHandPos = Vector3((Input.mousePosition.x), (Input.mousePosition.y), 0.0f);	//With mouse
+	
+	//GameObject.Find("indestructable").GetComponent(globalScript).setHand(finalHandPos);			//Activate this one for kinect controls
 	//Debug.Log(GameObject.Find("indestructable").GetComponent(globalScript).getHand());
 	
-	GameObject.Find("indestructable").GetComponent(globalScript).setHand(Vector3((Input.mousePosition.x), (Screen.height - Input.mousePosition.y), 0.0f));		//Activate this one for mouse controls
+	GameObject.Find("indestructable").GetComponent(globalScript).setHand(finalHandPos);		//Activate this one for mouse controls
+	
+	
+	var ray:Ray = Camera.main.ScreenPointToRay(finalHandPos);
+	//print(ray);
+	
+	var hit : RaycastHit;
+	
+	if(jobScene == true)
+	{
+		if(Physics.Raycast(ray, hit, 20.0)){
+			Debug.Log(hit.collider.name);
+		}
+		
+		Debug.DrawLine (ray.origin, hit.point, Color.green);
+		
+	}	
 }
 
 function OnGUI()

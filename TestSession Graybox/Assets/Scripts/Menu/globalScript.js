@@ -12,6 +12,8 @@ private var showMenu:boolean = false;
 private var state:String = "Menu";
 private var handPosition:Vector3;			//Hand Cursor
 
+private var jobScene:boolean = false;
+
 static var createdIndestructable:boolean = false;	//if it is already created then its true
 
 function Awake()
@@ -123,6 +125,11 @@ public function setHand(pos:Vector3):void
 	handPosition = pos;
 }
 
+public function setJobSceneBool(bool:boolean):void
+{
+	jobScene = bool;
+}
+
 //
 //	Getters
 //
@@ -151,4 +158,9 @@ public function getMode():String
 public function getHand():Vector3
 {
 	return handPosition;
+}
+
+public function getJobSceneBool():boolean
+{
+	return jobScene;
 }
