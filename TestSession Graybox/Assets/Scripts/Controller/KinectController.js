@@ -34,7 +34,7 @@ function Update ()
 	//print(Input.mousePosition.y + "   -   " + (Screen.height - Input.mousePosition.y));
 	
 	//finalHandPos = finalPos;	//With Kinect
-	finalHandPos = Vector3((Input.mousePosition.x), (Input.mousePosition.y), 0.0f);	//With mouse
+	finalHandPos = Vector3((Input.mousePosition.x), (Screen.height - Input.mousePosition.y), 0.0f);	//With mouse
 	
 	//GameObject.Find("indestructable").GetComponent(globalScript).setHand(finalHandPos);			//Activate this one for kinect controls
 	//Debug.Log(GameObject.Find("indestructable").GetComponent(globalScript).getHand());
@@ -42,7 +42,7 @@ function Update ()
 	GameObject.Find("indestructable").GetComponent(globalScript).setHand(finalHandPos);		//Activate this one for mouse controls
 	
 	
-	var ray:Ray = Camera.main.ScreenPointToRay(finalHandPos);
+	var ray:Ray = Camera.main.ScreenPointToRay(Vector3(finalHandPos.x, (Screen.height - finalHandPos.y), finalHandPos.z));
 	//print(ray);
 	
 	var hit : RaycastHit;
