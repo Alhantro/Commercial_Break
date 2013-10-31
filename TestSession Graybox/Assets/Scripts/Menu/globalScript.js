@@ -82,12 +82,12 @@ function OnGUI()
 //
 //	Setters
 //
-public function enableIngameMenu()
+public function enableIngameMenu():void
 {
 	ingameMenu = true;
 }
 
-public function disableIngameMenu()
+public function disableIngameMenu():void
 {
 	ingameMenu = false;
 }
@@ -98,7 +98,7 @@ public function addToDebug(message:String):void
 	//debug = message;
 }
 
-public function setState(value:String)
+public function setState(value:String):void
 {
 	state = value;
 }
@@ -108,17 +108,17 @@ public function setJob(job:String):void
 	jobString = job;
 }
 
-public function setAmountCorrect(value:int)
+public function setAmountCorrect(value:int):void
 {
 	amount_Correct = value;
 }
 
-public function setAmountBoxes(value:int)
+public function setAmountBoxes(value:int):void
 {
 	amount_Boxes = value;
 }
 
-public function setHand(pos:Vector3)
+public function setHand(pos:Vector3):void
 {
 	handPosition = pos;
 }

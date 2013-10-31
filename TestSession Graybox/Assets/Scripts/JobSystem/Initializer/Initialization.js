@@ -105,7 +105,7 @@ private function getFileName(file:String):String
 	return result;
 }
 
-private function buildFalseArray()
+private function buildFalseArray():void
 {
 	for(var i=0; i<assetNameArray.length; i++)
 	{
@@ -120,7 +120,7 @@ private function buildFalseArray()
 	}
 }
 
-public function removeFromFalseArray(value:int)
+public function removeFromFalseArray(value:int):void
 {
 	falseAssetArray.RemoveAt(value);
 	falseAssetNameArray.RemoveAt(value);

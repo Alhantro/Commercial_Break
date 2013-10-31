@@ -135,9 +135,6 @@ public class Jobs
 		}
 		
 	}
-
-	public function endGame()
-	{}
 	
 	private function fillCorrect(box:GameObject):void
 	{

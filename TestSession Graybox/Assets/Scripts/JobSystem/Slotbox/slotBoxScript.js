@@ -59,7 +59,7 @@ public function OnMouseUp()
 	}
 }
 
-private function isSelected()
+private function isSelected():void
 {
 	//Debug.Log(transform.position);
    	var newPosition : Vector3 = new Vector3(0.0, 0.0, 1.0);

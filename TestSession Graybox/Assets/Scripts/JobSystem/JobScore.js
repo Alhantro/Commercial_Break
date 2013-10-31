@@ -1,12 +1,13 @@
 #pragma strict
 
-public var score : int;
-public var amountSelected : int;
 
-private var setButton = false;
+private var amountSelected : int;
+
+private var setButton:boolean = false;
 private var endString : String;
+private var score : int;
 
-public function endJob()
+public function endJob():void
 {
 	//Function for Certificate & Score
 	//For Score we can also use a multiplication by time or other things to calculate a score.

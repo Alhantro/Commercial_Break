@@ -79,43 +79,43 @@ function OnGUI() {
 	}
 }
 
-private function startGame()
+private function startGame():void
 {
 	m_menuMode = 2;
 	GameObject.Find("indestructable").GetComponent(globalScript).setState("Start");
 }
 
-private function options()
+private function options():void
 {
 	m_menuMode = 1;
 	GameObject.Find("indestructable").GetComponent(globalScript).setState("Settings");
 }
 
-private function leaveGame()
+private function leaveGame():void
 {
 	Application.Quit();
 }
 
-private function setResolution1()
+private function setResolution1():void
 {
 	SetResolution(1920, 1080);
 	return;
 }
 
-private function setResolution2()
+private function setResolution2():void
 {
 	SetResolution(1280, 720);
 	return;
 }
 
-private function backToMenu()
+private function backToMenu():void
 {
 	m_menuMode = 0;
 	GameObject.Find("indestructable").GetComponent(globalScript).setState("Menu");
 	return;
 }
 
-private function easyMode()
+private function easyMode():void
 {
 	Application.LoadLevel("CityScene");
 	GameObject.Find("indestructable").GetComponent(globalScript).enableIngameMenu();
@@ -123,7 +123,7 @@ private function easyMode()
 	GameObject.Find("indestructable").GetComponent(globalScript).setAmountCorrect(3);
 }
 
-private function normalMode()
+private function normalMode():void
 {
 	Application.LoadLevel("CityScene");
 	GameObject.Find("indestructable").GetComponent(globalScript).enableIngameMenu();
@@ -131,7 +131,7 @@ private function normalMode()
 	GameObject.Find("indestructable").GetComponent(globalScript).setAmountCorrect(3);
 }
 
-private function hardMode()
+private function hardMode():void
 {
 	Application.LoadLevel("CityScene");
 	GameObject.Find("indestructable").GetComponent(globalScript).enableIngameMenu();
@@ -139,7 +139,7 @@ private function hardMode()
 	GameObject.Find("indestructable").GetComponent(globalScript).setAmountCorrect(3);
 }
 
-function SetResolution(width:int, height:int) {
+function SetResolution(width:int, height:int):void {
 	m_ratiox = width / 5;
 	m_ratioy = height / 20;
 	Screen.SetResolution(width, height, false);
