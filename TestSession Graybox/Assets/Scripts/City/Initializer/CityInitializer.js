@@ -4,6 +4,7 @@ import System.Xml;	//needed for XML reading
 import System.IO;	//needed for File IO (example: File.Exists)
 
 private var textStyle:GUIStyle = new GUIStyle();
+public var buttonTexture:Texture2D[];
 
 function Awake()
 {
@@ -34,11 +35,6 @@ function OnGUI()
 		GameObject.Find("indestructable").GetComponent(globalScript).setJob("Marine");
 		startGame();
 	}
-//	if(GUI.Button(Rect(Screen.width / 10 + 220, Screen.height / 10, 100, 100),"Schoonmaker"))
-//	{
-//		GameObject.Find("indestructable").GetComponent(globalScript).setJob("Cleaner");
-//		startGame();
-//	}
 	if(GUI.Button(Rect(Screen.width / 10 + 330, Screen.height / 10, 100, 100),"Verpleegster"))
 	{
 		GameObject.Find("indestructable").GetComponent(globalScript).setJob("Nurse");
@@ -49,13 +45,41 @@ function OnGUI()
 		GameObject.Find("indestructable").GetComponent(globalScript).setJob("Policeman");
 		startGame();
 	}
-//	if(GUI.Button(Rect(Screen.width / 10 + 550, Screen.height / 10, 100, 100),"Receptioniste"))
-//	{
-//		GameObject.Find("indestructable").GetComponent(globalScript).setJob("Secretary");
-//		startGame();
-//	}
-
+	
 	GUI.Label(Rect(20, 20, Screen.width, 100), "Kies hier je baan", textStyle);
+
+
+//
+//buttons with textures (functionality implementation, got no textures from creative so commented out)
+//
+/*
+	if(GUI.Button(Rect(Screen.width / 10, Screen.height / 10, 100, 100), buttonTexture[0]))
+	{
+		GameObject.Find("indestructable").GetComponent(globalScript).setJob("Fireman");
+		startGame();
+	}
+	if(GUI.Button(Rect(Screen.width / 10 + 110, Screen.height / 10, 100, 100), buttonTexture[1]))
+	{
+		GameObject.Find("indestructable").GetComponent(globalScript).setJob("Army");
+		startGame();
+	}
+	if(GUI.Button(Rect(Screen.width / 10 + 220, Screen.height / 10, 100, 100), buttonTexture[2]))
+	{
+		GameObject.Find("indestructable").GetComponent(globalScript).setJob("Marine");
+		startGame();
+	}
+	if(GUI.Button(Rect(Screen.width / 10 + 330, Screen.height / 10, 100, 100), buttonTexture[3]))
+	{
+		GameObject.Find("indestructable").GetComponent(globalScript).setJob("Nurse");
+		startGame();
+	}
+	if(GUI.Button(Rect(Screen.width / 10 + 440, Screen.height / 10, 100, 100), buttonTexture[4]))
+	{
+		GameObject.Find("indestructable").GetComponent(globalScript).setJob("Policeman");
+		startGame();
+	}
+*/
+	
 }
 
 private function startGame():void
