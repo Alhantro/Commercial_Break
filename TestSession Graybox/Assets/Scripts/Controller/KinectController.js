@@ -19,17 +19,20 @@ function Update ()
 	//Debug.Log(position);
 	handPosition = scalePosition(midScreen, position);
 	
-	finalPos.x = handPosition.x;
-	finalPos.y = (Screen.height - handPosition.y);
+	finalPos.x = (handPosition.x - 32.0);
+	finalPos.y = (Screen.height - handPosition.y - 32.0);
 	finalPos.z = handPosition.z;
 	
-	GameObject.Find("indestructable").GetComponent(globalScript).setHand(finalPos);
+	//GameObject.Find("indestructable").GetComponent(globalScript).setHand(finalPos);			//Activate this one for kinect controls
 	//Debug.Log(GameObject.Find("indestructable").GetComponent(globalScript).getHand());
+	
+	GameObject.Find("indestructable").GetComponent(globalScript).setHand(Vector3((Input.mousePosition.x), (Screen.height - Input.mousePosition.y), 0.0f));		//Activate this one for mouse controls
 }
 
 function OnGUI()
 {
-	GUI.DrawTexture(Rect((handPosition.x - 32), (Screen.height - handPosition.y - 32), 64, 64), mouseHand, ScaleMode.ScaleToFit, true);
+	//GUI.DrawTexture(Rect(finalPos.x, finalPos.y, 64, 64), mouseHand, ScaleMode.ScaleToFit, true);		//Activate this one for kinect controls
+	GUI.DrawTexture(Rect((Input.mousePosition.x - 32.0), (Screen.height - Input.mousePosition.y - 32.0), 64, 64), mouseHand, ScaleMode.ScaleToFit, true);		//Activate this one for mouse controls
 }
 
 function scalePosition(midScreenPos:Vector3, position:Vector3):Vector3
