@@ -48,9 +48,9 @@ public class Jobs
 	
 	private function randomCircle(i:int):Vector3{			//spawn the amount in a circle		* on the circle somewhere Vec3*/);
 		var ang = (360 / GameObject.Find("indestructable").GetComponent(globalScript).getAmountBoxes() * i);			//360 degrees / items * itemNumber
-		var radius = 5;						//position of the squares from the center
+		var radius = 6;						//position of the squares from the center
 		
-		var center : Vector3 = Vector3(0.0, 0.0, 1.0);
+		var center : Vector3 = Vector3(0.0, 0.0, 2.0);
 		center.x = GameObject.Find("Environment").transform.FindChild("Main Camera").transform.position.x;
 		center.y = GameObject.Find("Environment").transform.FindChild("Main Camera").transform.position.y;	
 		
