@@ -137,8 +137,8 @@ public function getAmountCorrect():int
 
 public function getAmountBoxes():int
 {
-	//check first if its higher than 10, the game is not built for higher than 10
-	if(amount_Boxes > 10) setAmountBoxes(10);
+	//check first if its higher than 18, the game is not built for higher than 18
+	if(amount_Boxes > 18) setAmountBoxes(18);
 	return amount_Boxes;
 }
 

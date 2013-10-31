@@ -119,7 +119,7 @@ private function easyMode()
 {
 	Application.LoadLevel("CityScene");
 	GameObject.Find("indestructable").GetComponent(globalScript).enableIngameMenu();
-	GameObject.Find("indestructable").GetComponent(globalScript).setAmountBoxes(6);
+	GameObject.Find("indestructable").GetComponent(globalScript).setAmountBoxes(10);
 	GameObject.Find("indestructable").GetComponent(globalScript).setAmountCorrect(3);
 }
 
@@ -127,7 +127,7 @@ private function normalMode()
 {
 	Application.LoadLevel("CityScene");
 	GameObject.Find("indestructable").GetComponent(globalScript).enableIngameMenu();
-	GameObject.Find("indestructable").GetComponent(globalScript).setAmountBoxes(8);
+	GameObject.Find("indestructable").GetComponent(globalScript).setAmountBoxes(13);
 	GameObject.Find("indestructable").GetComponent(globalScript).setAmountCorrect(3);
 }
 
@@ -135,7 +135,7 @@ private function hardMode()
 {
 	Application.LoadLevel("CityScene");
 	GameObject.Find("indestructable").GetComponent(globalScript).enableIngameMenu();
-	GameObject.Find("indestructable").GetComponent(globalScript).setAmountBoxes(10);
+	GameObject.Find("indestructable").GetComponent(globalScript).setAmountBoxes(16);
 	GameObject.Find("indestructable").GetComponent(globalScript).setAmountCorrect(3);
 }
 
