@@ -1,0 +1,15 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\JobSystem\JobScore.js">
+    <Files>
+      <File FileName="Assets\Scripts\JobSystem\JobScore.js" Line="21" Column="55" />
+      <File FileName="Assets\Scripts\Controller\KinectController.js" Line="100" Column="43" />
+      <File FileName="Assets\Scripts\Menu\MenuScript.js" Line="48" Column="13" />
+      <File FileName="Assets\Scripts\JobSystem\Slotbox\slotBoxScript.js" Line="41" Column="4" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

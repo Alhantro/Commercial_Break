@@ -35,19 +35,22 @@ public function OnMouseUp()
 {
 	var jobScore = GameObject.Find("ScriptHolder").GetComponent(JobScore);
 	
-	if(selected == false)
+	if(jobScore.getSelected() != GameObject.Find("indestructable").GetComponent(globalScript).getAmountCorrect())
 	{
-		if(correct)
+		if(selected == false)
 		{
-			jobScore.setScore(1);			//Correct! Score + 1
-			jobScore.setSelected(1);
-			selected = true;
-		}
-		else
-		{
-			jobScore.setScore(0);			//False! Score +_0
-			jobScore.setSelected(1);
-			selected = true;
+			if(correct)
+			{
+				jobScore.setScore(1);			//Correct! Score + 1
+				jobScore.setSelected(1);
+				selected = true;
+			}
+			else
+			{
+				jobScore.setScore(0);			//False! Score +_0
+				jobScore.setSelected(1);
+				selected = true;
+			}
 		}
 	}
 	Debug.Log("Score : " + jobScore.getScore());

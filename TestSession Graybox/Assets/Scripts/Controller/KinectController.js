@@ -32,19 +32,19 @@ function Update ()
 	//Debug.Log(position);
 	handPosition = scalePosition(midScreen, position);
 	
-	finalPos.x = (handPosition.x - 32.0);
-	finalPos.y = (Screen.height - handPosition.y - 32.0);
+	finalPos.x = handPosition.x;
+	finalPos.y = (Screen.height - handPosition.y);
 	finalPos.z = handPosition.z;
 	
 	//print(Input.mousePosition.y + "   -   " + (Screen.height - Input.mousePosition.y));
 	
-	//finalHandPos = finalPos;	//With Kinect
-	finalHandPos = Vector3((Input.mousePosition.x), (Screen.height - Input.mousePosition.y), 0.0f);	//With mouse
+	finalHandPos = finalPos;	//With Kinect
+	//finalHandPos = Vector3((Input.mousePosition.x), (Screen.height - Input.mousePosition.y), 0.0f);	//With mouse
 	
-	//GameObject.Find("indestructable").GetComponent(globalScript).setHand(finalHandPos);			//Activate this one for kinect controls
+	GameObject.Find("indestructable").GetComponent(globalScript).setHand(finalHandPos);			//Activate this one for kinect controls
 	//Debug.Log(GameObject.Find("indestructable").GetComponent(globalScript).getHand());
 	
-	GameObject.Find("indestructable").GetComponent(globalScript).setHand(finalHandPos);		//Activate this one for mouse controls
+	//GameObject.Find("indestructable").GetComponent(globalScript).setHand(finalHandPos);		//Activate this one for mouse controls
 	
 	
 	var ray:Ray = Camera.main.ScreenPointToRay(Vector3(finalHandPos.x, (Screen.height - finalHandPos.y), finalHandPos.z));
@@ -86,13 +86,13 @@ private function increaseTimer()
 	
 	seconds = Mathf.RoundToInt(timer%60);
 	
-	Debug.Log(seconds);
+	//Debug.Log(seconds);
 }
 
 function OnGUI()
 {
-	//GUI.DrawTexture(Rect(finalPos.x, finalPos.y, 64, 64), mouseHand, ScaleMode.ScaleToFit, true);		//Activate this one for kinect controls
-	GUI.DrawTexture(Rect((Input.mousePosition.x - 32.0), (Screen.height - Input.mousePosition.y - 32.0), 64, 64), mouseHand, ScaleMode.ScaleToFit, true);		//Activate this one for mouse controls
+	GUI.DrawTexture(Rect((finalPos.x - 32.0), (finalPos.y - 32.0), 64, 64), mouseHand, ScaleMode.ScaleToFit, true);		//Activate this one for kinect controls
+	//GUI.DrawTexture(Rect((Input.mousePosition.x - 32.0), (Screen.height - Input.mousePosition.y - 32.0), 64, 64), mouseHand, ScaleMode.ScaleToFit, true);		//Activate this one for mouse controls
 }
 
 function scalePosition(midScreenPos:Vector3, position:Vector3):Vector3

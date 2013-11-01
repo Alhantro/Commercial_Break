@@ -54,7 +54,7 @@ function Update()
 	if(checkInButton(nurseB)) nurse();
 	if(checkInButton(policeB)) police();
 	
-	Debug.Log(seconds);
+	//Debug.Log(seconds);
 }
 
 private function checkInButton(rect:Rect):boolean
