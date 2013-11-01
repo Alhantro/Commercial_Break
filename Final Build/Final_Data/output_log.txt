@@ -1,0 +1,1687 @@
+Initialize engine version: 4.0.0f7
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 9.0c [nvd3dum.dll 9.18.13.1414]
+    Renderer: NVIDIA GeForce GTX 460M
+    Vendor:   NVIDIA
+    VRAM:     1488 MB (via DXGI)
+    Caps:     Shader=30 DepthRT=1 NativeDepth=1 NativeShadow=1 DF16=0 DF24=0 INTZ=1 RAWZ=0 NULL=1 RESZ=0 SlowINTZ=0
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\MaskedMouse\Desktop\School\Github\Commercial_Break\Final Build\Final_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\MaskedMouse\Desktop\School\Github\Commercial_Break\Final Build\Final_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\MaskedMouse\Desktop\School\Github\Commercial_Break\Final Build\Final_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\MaskedMouse\Desktop\School\Github\Commercial_Break\Final Build\Final_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\MaskedMouse\Desktop\School\Github\Commercial_Break\Final Build\Final_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
+Loading C:\Users\MaskedMouse\Desktop\School\Github\Commercial_Break\Final Build\Final_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
+- Completed reload, in  0.082 seconds
+<RI> Initializing input.
+<RI> Input initialized.
+desktop: 1920x1080 59Hz; virtual: 1920x1080 at 0,0
+Platform assembly: C:\Users\MaskedMouse\Desktop\School\Github\Commercial_Break\Final Build\Final_Data\Managed\UnityScript.Lang.dll (this message is harmless)
+Platform assembly: C:\Users\MaskedMouse\Desktop\School\Github\Commercial_Break\Final Build\Final_Data\Managed\Boo.Lang.dll (this message is harmless)
+C:\Windows\System32\Kinect10.dll
+ 
+(Filename: C:/BuildAgent/work/812c4f5049264fad/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 43)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiSkeletonGetNextFrame (uint,Kinect.NuiSkeletonFrame&)
+  at KinectSensor.Kinect.KinectInterface.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at SkeletonWrapper.pollSkeleton () [0x00000] in <filename unknown>:0 
+  at KinectModelControllerV2.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+DllNotFoundException: C:\Windows\System32\Kinect10.dll
+  at (wrapper managed-to-native) Kinect.NativeMethods:NuiShutdown ()
+  at KinectSensor.OnApplicationQuit () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
