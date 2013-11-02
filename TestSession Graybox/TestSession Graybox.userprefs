@@ -1,11 +1,11 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\JobSystem\JobScore.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Menu and global\MenuScript.js">
     <Files>
-      <File FileName="Assets\Scripts\JobSystem\JobScore.js" Line="21" Column="55" />
-      <File FileName="Assets\Scripts\Controller\KinectController.js" Line="100" Column="43" />
-      <File FileName="Assets\Scripts\Menu\MenuScript.js" Line="48" Column="13" />
-      <File FileName="Assets\Scripts\JobSystem\Slotbox\slotBoxScript.js" Line="41" Column="4" />
+      <File FileName="Assets\Scripts\Menu and global\MenuScript.js" Line="228" Column="15" />
+      <File FileName="Assets\Scripts\Controller\KinectController.js" Line="94" Column="15" />
+      <File FileName="Assets\Scripts\JobSystem\JobScore.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Editor\PostBuild.js" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

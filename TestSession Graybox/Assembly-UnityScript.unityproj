@@ -18,7 +18,7 @@
 	<DebugType>full</DebugType>
 	<Optimize>false</Optimize>
 	<OutputPath>Temp\bin\Debug\</OutputPath>
-	<DefineConstants>DEBUG;TRACE;UNITY_STANDALONE;ENABLE_MICROPHONE;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;ENABLE_AUDIO_FMOD;ENABLE_NETWORK;ENABLE_MONO;ENABLE_PHYSICS;ENABLE_TERRAIN;ENABLE_CACHING;ENABLE_SUBSTANCE;ENABLE_GENERICS;ENABLE_CLOTH;ENABLE_MOVIES;ENABLE_AUDIO;ENABLE_WWW;ENABLE_SHADOWS;ENABLE_DUCK_TYPING;UNITY_4_0_0;UNITY_4_0;UNITY_STANDALONE_WIN;ENABLE_PROFILER;UNITY_EDITOR</DefineConstants>
+	<DefineConstants>DEBUG;TRACE;UNITY_STANDALONE;ENABLE_MICROPHONE;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;ENABLE_AUDIO_FMOD;ENABLE_NETWORK;ENABLE_MONO;ENABLE_PHYSICS;ENABLE_TERRAIN;ENABLE_CACHING;ENABLE_SUBSTANCE;ENABLE_GENERICS;ENABLE_CLOTH;ENABLE_MOVIES;ENABLE_AUDIO;ENABLE_WWW;ENABLE_SHADOWS;ENABLE_DUCK_TYPING;UNITY_4_0_0;UNITY_4_0;UNITY_STANDALONE_WIN;ENABLE_PROFILER;UNITY_EDITOR;UNITY_TEAM_LICENSE</DefineConstants>
 	<ErrorReport>prompt</ErrorReport>
 	<WarningLevel>4</WarningLevel>
 	<NoWarn>0169</NoWarn>
@@ -50,14 +50,13 @@
      <Compile Include="Assets\Scripts\City\Initializer\CityInitializer.js" />
      <Compile Include="Assets\Scripts\Controller\KinectController.js" />
      <Compile Include="Assets\Scripts\JobSystem\BackgroundSetter\setBackgroundTexture.js" />
-     <Compile Include="Assets\Scripts\JobSystem\ChoiceScript\Choice.js" />
      <Compile Include="Assets\Scripts\JobSystem\Initializer\Initialization.js" />
+     <Compile Include="Assets\Scripts\JobSystem\JobClass\Jobs.js" />
      <Compile Include="Assets\Scripts\JobSystem\JobLabel.js" />
      <Compile Include="Assets\Scripts\JobSystem\JobScore.js" />
      <Compile Include="Assets\Scripts\JobSystem\Slotbox\slotBoxScript.js" />
-     <Compile Include="Assets\Scripts\JobSystem\Superclass\Jobs.js" />
-     <Compile Include="Assets\Scripts\Menu\MenuScript.js" />
-     <Compile Include="Assets\Scripts\Menu\globalScript.js" />
+     <Compile Include="Assets\Scripts\Menu and global\MenuScript.js" />
+     <Compile Include="Assets\Scripts\Menu and global\globalScript.js" />
      <Compile Include="Assets\Scripts\SoundSystem\SoundPlayer.js" />
      <None Include="Assets\Scripts\City\XML\City.xml" />
      <None Include="Assets\Asset\Shaders\Normal-Diffuse.shader" />
