@@ -1,4 +1,5 @@
 #pragma strict
+#pragma downcast
 	private var m_ratiox:int = Screen.width / 5;
 	private var m_ratioy:int = Screen.height / 20;
 	private var m_BoxesValue:int = 6;
@@ -8,18 +9,18 @@
 	private var handPos : Vector3;
 	
 // Button rectangles
-	private var startGameB : Rect = Rect((Screen.width / 2 - m_ratiox /2), (Screen.height / 2 - m_ratioy /2 - m_ratioy * 3), m_ratiox, m_ratioy * 2);
-	private var optionsB : Rect = Rect((Screen.width / 2 - m_ratiox /2), (Screen.height / 2 - m_ratioy /2 ), m_ratiox, m_ratioy * 2);
-	private var leaveGameB : Rect = Rect((Screen.width / 2 - m_ratiox /2), (Screen.height / 2 - m_ratioy /2 + m_ratioy * 3), m_ratiox, m_ratioy * 2);
+	private var startGameB 	: Rect = Rect((Screen.width / 2 - m_ratiox /2)	, (Screen.height / 2 - m_ratioy /2 - m_ratioy * 3)	, m_ratiox, m_ratioy * 2);
+	private var optionsB 	: Rect = Rect((Screen.width / 2 - m_ratiox /2)	, (Screen.height / 2 - m_ratioy /2 )				, m_ratiox, m_ratioy * 2);
+	private var leaveGameB 	: Rect = Rect((Screen.width / 2 - m_ratiox /2)	, (Screen.height / 2 - m_ratioy /2 + m_ratioy * 3)	, m_ratiox, m_ratioy * 2);
 	
-	private var resolution1 : Rect = Rect((Screen.width / 2 - m_ratiox /2), (Screen.height / 2 - m_ratioy /2 - m_ratioy * 2), m_ratiox, m_ratioy * 2);
-	private var resolution2 : Rect = Rect((Screen.width / 2 - m_ratiox /2), (Screen.height / 2 - m_ratioy /2 ), m_ratiox, m_ratioy * 2);
-	private var backButton1 : Rect = Rect((Screen.width / 2 - m_ratiox /2), (Screen.height / 2 - m_ratioy /2 + m_ratioy * 7), m_ratiox, m_ratioy* 2);
+	private var resolution1 : Rect = Rect((Screen.width / 2 - m_ratiox /2)	, (Screen.height / 2 - m_ratioy /2 - m_ratioy * 2)	, m_ratiox, m_ratioy * 2);
+	private var resolution2 : Rect = Rect((Screen.width / 2 - m_ratiox /2)	, (Screen.height / 2 - m_ratioy /2 )				, m_ratiox, m_ratioy * 2);
+	private var backButton1 : Rect = Rect((Screen.width / 2 - m_ratiox /2)	, (Screen.height / 2 - m_ratioy /2 + m_ratioy * 7)	, m_ratiox, m_ratioy * 2);
 	
-	private var easy : Rect = Rect((Screen.width / 2 - m_ratiox /2 - m_ratiox * 1.1), (Screen.height / 2 - m_ratioy /2 + m_ratioy * 4), m_ratiox, m_ratioy * 2);
-	private var normal : Rect = Rect((Screen.width / 2 - m_ratiox /2), (Screen.height / 2 - m_ratioy /2 + m_ratioy * 4), m_ratiox, m_ratioy * 2);
-	private var hard : Rect = Rect((Screen.width / 2 - m_ratiox /2 + m_ratiox * 1.1), (Screen.height / 2 - m_ratioy /2 + m_ratioy * 4), m_ratiox, m_ratioy * 2);
-	private var backButton2 : Rect = Rect((Screen.width / 2 - m_ratiox /2), (Screen.height / 2 - m_ratioy /2 + m_ratioy * 7), m_ratiox, m_ratioy* 2);
+	private var easy 		: Rect = Rect((Screen.width / 2 - m_ratiox /2 - m_ratiox * 1.1)		, (Screen.height / 2 - m_ratioy /2 + m_ratioy * 4)	, m_ratiox, m_ratioy * 2);
+	private var normal 		: Rect = Rect((Screen.width / 2 - m_ratiox /2)						, (Screen.height / 2 - m_ratioy /2 + m_ratioy * 4)	, m_ratiox, m_ratioy * 2);
+	private var hard 		: Rect = Rect((Screen.width / 2 - m_ratiox /2 + m_ratiox * 1.1)		, (Screen.height / 2 - m_ratioy /2 + m_ratioy * 4)	, m_ratiox, m_ratioy * 2);
+	private var backButton2 : Rect = Rect((Screen.width / 2 - m_ratiox /2)						, (Screen.height / 2 - m_ratioy /2 + m_ratioy * 7)	, m_ratiox, m_ratioy * 2);
 	
 	private var rectArray : Array = new Array();
 	//private var rectArrayNames : Array = new Array();
@@ -31,6 +32,8 @@
 	private var buttonTextureArray:Array = new Array();
 	public var guiStyle:GUIStyle = new GUIStyle();
 	private var backgroundTexture:Texture2D;
+	
+	private var doneLoadingButtons:boolean = false;
 
 function Awake()
 {
@@ -42,7 +45,6 @@ function Awake()
 		rectBoolArray.Push(false);
 	}
 	//rectArrayNames.Push("startGame", "optionsB", "leaveGameB", "resolution1", "resolution2", "backButton1", "easy", "normal", "hard", "backButton2");
-	fillButtonTextureArray();
 	
 }
 
@@ -87,7 +89,7 @@ private function checkInButton(rect:Rect):boolean
 		} 
 		else increaseTimer();
 	}
-	else return false;
+	return false;
 }
 
 private function increaseTimer()
@@ -225,78 +227,88 @@ function OnGUI() {
 
 //texturing the buttons
 function OnGUI() {
-	GUI.depth = 1;
-	GUI.DrawTexture(Rect(0,0,Screen.width,Screen.height), backgroundTexture, ScaleMode.StretchToFill);
-
-	if (m_menuMode == 0)
+	if(doneLoadingButtons)
 	{
-		if(GUI.Button(startGameB,"", guiStyle)) startGame();									//Start Game
-		GUI.DrawTexture(startGameB, buttonTextureArray[0] as Texture, ScaleMode.StretchToFill);
-		
-		if(GUI.Button(optionsB, "", guiStyle)) options();					//Options
-		GUI.DrawTexture(optionsB, buttonTextureArray[1] as Texture, ScaleMode.StretchToFill);
-		
-		if(GUI.Button(leaveGameB, "", guiStyle)) leaveGame();				//Leave Game
-		GUI.DrawTexture(leaveGameB, buttonTextureArray[2] as Texture, ScaleMode.StretchToFill);
+		GUI.depth = 1;
+		GUI.DrawTexture(Rect(0,0,Screen.width,Screen.height), backgroundTexture, ScaleMode.StretchToFill);
+	
+		if (m_menuMode == 0)
+		{
+			if(GUI.Button(startGameB	,	""	,	guiStyle)) startGame();									//Start Game
+			GUI.DrawTexture(startGameB, buttonTextureArray[0] as Texture, ScaleMode.StretchToFill);
+			
+			if(GUI.Button(optionsB		, 	""	,	guiStyle)) options();					//Options
+			GUI.DrawTexture(optionsB, buttonTextureArray[1] as Texture, ScaleMode.StretchToFill);
+			
+			if(GUI.Button(leaveGameB	, 	""	,	guiStyle)) leaveGame();				//Leave Game
+			GUI.DrawTexture(leaveGameB, buttonTextureArray[2] as Texture, ScaleMode.StretchToFill);
+		}
+		if (m_menuMode == 1)
+		{
+			if(GUI.Button(resolution1	, 	""	,	guiStyle)) setResolution1();			//Set 1920x1080
+			GUI.DrawTexture(resolution1, buttonTextureArray[3] as Texture, ScaleMode.StretchToFill);
+			
+			if(GUI.Button(resolution2	,	""	,	guiStyle)) setResolution2();			//Set 1280x720
+			GUI.DrawTexture(resolution2, buttonTextureArray[4] as Texture, ScaleMode.StretchToFill);
+			
+			if(GUI.Button(backButton1	,	""	,	guiStyle)) backToMenu();				//Back to Menu
+			GUI.DrawTexture(backButton1, buttonTextureArray[5] as Texture, ScaleMode.StretchToFill);
+		}
+		if (m_menuMode == 2)
+		{
+			if(GUI.Button(easy		,	""	,	guiStyle)) easyMode();						//Set Easy
+			GUI.DrawTexture(easy, buttonTextureArray[6] as Texture, ScaleMode.StretchToFill);
+			
+			if(GUI.Button(normal	,	""	,	guiStyle)) normalMode();					//Set Normal
+			GUI.DrawTexture(normal, buttonTextureArray[7] as Texture, ScaleMode.StretchToFill);
+			
+			if(GUI.Button(hard		,	""	,	guiStyle)) hardMode();						//Set Hard
+			GUI.DrawTexture(hard, buttonTextureArray[8] as Texture, ScaleMode.StretchToFill);
+			
+			if(GUI.Button(backButton2,	""	,	guiStyle)) backToMenu();				//Back to Menu
+			GUI.DrawTexture(backButton2, buttonTextureArray[5] as Texture, ScaleMode.StretchToFill);
+		}
 	}
-	if (m_menuMode == 1)
+	else
 	{
-		if(GUI.Button(resolution1, "", guiStyle)) setResolution1();			//Set 1920x1080
-		GUI.DrawTexture(resolution1, buttonTextureArray[3] as Texture, ScaleMode.StretchToFill);
-		
-		if(GUI.Button(resolution2, "", guiStyle)) setResolution2();			//Set 1280x720
-		GUI.DrawTexture(resolution2, buttonTextureArray[4] as Texture, ScaleMode.StretchToFill);
-		
-		if(GUI.Button(backButton1, "", guiStyle)) backToMenu();				//Back to Menu
-		GUI.DrawTexture(backButton1, buttonTextureArray[5] as Texture, ScaleMode.StretchToFill);
-	}
-	if (m_menuMode == 2)
-	{
-		if(GUI.Button(easy, "", guiStyle)) easyMode();						//Set Easy
-		GUI.DrawTexture(easy, buttonTextureArray[6] as Texture, ScaleMode.StretchToFill);
-		
-		if(GUI.Button(normal, "", guiStyle)) normalMode();					//Set Normal
-		GUI.DrawTexture(normal, buttonTextureArray[7] as Texture, ScaleMode.StretchToFill);
-		
-		if(GUI.Button(hard, "", guiStyle)) hardMode();						//Set Hard
-		GUI.DrawTexture(hard, buttonTextureArray[8] as Texture, ScaleMode.StretchToFill);
-		
-		if(GUI.Button(backButton2, "", guiStyle)) backToMenu();				//Back to Menu
-		GUI.DrawTexture(backButton2, buttonTextureArray[5] as Texture, ScaleMode.StretchToFill);
+		if(buttonTextureArray.length == 9)
+		{
+			doneLoadingButtons = true;
+		}
 	}
 }
 
 
 function fillButtonTextureArray():void
 {
-	 var texture:Texture2D;
+	 var texture:Texture2D = null;
 	 
-	 texture = searchButtonTexture("Startgame");
+	 texture = GameObject.Find("indestructable").GetComponent(TextureLoader).getTexture("Startgame");
 	 buttonTextureArray.push(texture);
 	 
-	 texture = searchButtonTexture("Options");
+	 texture = GameObject.Find("indestructable").GetComponent(TextureLoader).getTexture("Options");
 	 buttonTextureArray.push(texture);
 	 
-	 texture = searchButtonTexture("Leavegame");
+	 texture = GameObject.Find("indestructable").GetComponent(TextureLoader).getTexture("Leavegame");
 	 buttonTextureArray.push(texture);
 	 
-	 texture = searchButtonTexture("Resolution1080p");
+	 texture = GameObject.Find("indestructable").GetComponent(TextureLoader).getTexture("Resolution1080p");
 	 buttonTextureArray.push(texture);
 	 
-	 texture = searchButtonTexture("Resolution720p");
+	 texture = GameObject.Find("indestructable").GetComponent(TextureLoader).getTexture("Resolution720p");
 	 buttonTextureArray.push(texture);
 	 
-	 texture = searchButtonTexture("Backbutton");
+	 texture = GameObject.Find("indestructable").GetComponent(TextureLoader).getTexture("Backbutton");
 	 buttonTextureArray.push(texture);
 	 
-	 texture = searchButtonTexture("Easy");
+	 texture = GameObject.Find("indestructable").GetComponent(TextureLoader).getTexture("Easy");
 	 buttonTextureArray.push(texture);
 	 
-	 texture = searchButtonTexture("Medium");
+	 texture = GameObject.Find("indestructable").GetComponent(TextureLoader).getTexture("Medium");
 	 buttonTextureArray.push(texture);
 	 
-	 texture = searchButtonTexture("Hard");
-	 buttonTextureArray.push(texture);	
+	 texture = GameObject.Find("indestructable").GetComponent(TextureLoader).getTexture("Hard");
+	 buttonTextureArray.push(texture);
 }
 
 

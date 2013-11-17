@@ -56,6 +56,7 @@
      <Compile Include="Assets\Scripts\JobSystem\JobScore.js" />
      <Compile Include="Assets\Scripts\JobSystem\Slotbox\slotBoxScript.js" />
      <Compile Include="Assets\Scripts\Menu and global\MenuScript.js" />
+     <Compile Include="Assets\Scripts\Menu and global\TextureLoader.js" />
      <Compile Include="Assets\Scripts\Menu and global\globalScript.js" />
      <Compile Include="Assets\Scripts\SoundSystem\SoundPlayer.js" />
      <None Include="Assets\Scripts\City\XML\City.xml" />

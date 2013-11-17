@@ -1,4 +1,5 @@
 #pragma strict
+#pragma downcast
 
 import System.Xml;	//needed for XML reading
 import System.IO;	//needed for File IO (example: File.Exists)
@@ -6,11 +7,20 @@ import System.IO;	//needed for File IO (example: File.Exists)
 private var textStyle:GUIStyle = new GUIStyle();
 public var buttonTexture:Texture2D[];
 
-private var fireB : Rect = Rect(Screen.width / 10, Screen.height / 10, 100, 100);
-private var armyB : Rect = Rect(Screen.width / 10 + 110, Screen.height / 10, 100, 100);
-private var marineB : Rect = Rect(Screen.width / 10 + 220, Screen.height / 10, 100, 100);
-private var nurseB : Rect = Rect(Screen.width / 10 + 330, Screen.height / 10, 100, 100);
-private var policeB : Rect = Rect(Screen.width / 10 + 440, Screen.height / 10, 100, 100);
+private var buttonWidth:int = 200;
+private var buttonHeight:int = 180;
+
+private var fireB 			: Rect 	= Rect(20							, Screen.height / 10, buttonWidth, buttonHeight);
+private var armyB 			: Rect 	= Rect(20 +  buttonWidth    + 10	, Screen.height / 10, buttonWidth, buttonHeight);
+private var marineB 		: Rect 	= Rect(20 + (buttonWidth*2) + 20	, Screen.height / 10, buttonWidth, buttonHeight);
+private var nurseB 			: Rect 	= Rect(20 + (buttonWidth*3) + 30	, Screen.height / 10, buttonWidth, buttonHeight);
+private var policeB 		: Rect 	= Rect(20 + (buttonWidth*4) + 40	, Screen.height / 10, buttonWidth, buttonHeight);
+
+private var cleanerB 		: Rect 	= Rect(20							, Screen.height / 10 + buttonHeight+80, buttonWidth, buttonHeight);
+private var truckDriverB 	: Rect 	= Rect(20 +  buttonWidth    + 10	, Screen.height / 10 + buttonHeight+80, buttonWidth, buttonHeight);
+private var airHostessB 	: Rect 	= Rect(20 + (buttonWidth*2) + 20	, Screen.height / 10 + buttonHeight+80, buttonWidth, buttonHeight);
+private var mechanicB 		: Rect 	= Rect(20 + (buttonWidth*3) + 30	, Screen.height / 10 + buttonHeight+80, buttonWidth, buttonHeight);
+private var waiterB 		: Rect 	= Rect(20 + (buttonWidth*4) + 40	, Screen.height / 10 + buttonHeight+80, buttonWidth, buttonHeight);
 
 //make new rectangles if you need more buttons
 //syntax
@@ -44,7 +54,7 @@ function Awake()
 //	//read the XML to texture our city
 //	readXML();
 
-	rectArray.Push(fireB, armyB, marineB, nurseB, policeB);		//Add rectangles here
+	rectArray.Push(fireB, armyB, marineB, nurseB, policeB, cleanerB, truckDriverB, airHostessB, mechanicB, waiterB);		//Add rectangles here
 
 	for(var i=0; i<rectArray.length; i++)
 	{
@@ -66,6 +76,11 @@ function Update()
 	if(checkInButton(marineB)) marine();
 	if(checkInButton(nurseB)) nurse();
 	if(checkInButton(policeB)) police();
+	if(checkInButton(cleanerB)) cleaner();
+	if(checkInButton(truckDriverB)) truckDriver();
+	if(checkInButton(airHostessB)) airHostess();
+	if(checkInButton(mechanicB)) mechanic();
+	if(checkInButton(waiterB)) waiter();
 	
 	//Debug.Log(seconds);
 }
@@ -81,7 +96,7 @@ private function checkInButton(rect:Rect):boolean
 		} 
 		else increaseTimer();
 	}
-	else return false;
+	return false;
 }
 
 private function increaseTimer()
@@ -154,6 +169,37 @@ private function police()
 	startGame();
 }
 
+private function cleaner()
+{
+	GameObject.Find("indestructable").GetComponent(globalScript).setJob("Cleaner");
+	startGame();
+}
+
+private function truckDriver()
+{
+	GameObject.Find("indestructable").GetComponent(globalScript).setJob("Truckdriver");
+	startGame();
+}
+
+private function airHostess()
+{
+	GameObject.Find("indestructable").GetComponent(globalScript).setJob("Airhostess");
+	startGame();
+}
+
+private function mechanic()
+{
+	GameObject.Find("indestructable").GetComponent(globalScript).setJob("Mechanic");
+	startGame();
+}
+
+private function waiter()
+{
+	GameObject.Find("indestructable").GetComponent(globalScript).setJob("Waiter");
+	startGame();
+}
+
+
 function OnGUI()
 {
 //	if(GUI.Button(fireB,"Brandweer")) fireman();
@@ -184,26 +230,20 @@ function OnGUI()
 	if(GUI.Button(policeB,"", guiStyle)) police();
 	GUI.DrawTexture(policeB, buttonTextureArray[4] as Texture, ScaleMode.StretchToFill);	//police
 	
-//	if(GUI.Button(cleanerB,"", guiStyle)) police();
-//	GUI.DrawTexture(cleanerB, buttonTextureArray[5] as Texture, ScaleMode.StretchToFill);	//cleaner
-//	
-//	if(GUI.Button(lifeguardB,"", guiStyle)) police();
-//	GUI.DrawTexture(lifeguardB, buttonTextureArray[6] as Texture, ScaleMode.StretchToFill);	//lifeguard
-//	
-//	if(GUI.Button(farmerB,"", guiStyle)) police();
-//	GUI.DrawTexture(farmerB, buttonTextureArray[7] as Texture, ScaleMode.StretchToFill);	//farmer
-//	
-//	if(GUI.Button(gardenerB,"", guiStyle)) police();
-//	GUI.DrawTexture(gardenerB, buttonTextureArray[8] as Texture, ScaleMode.StretchToFill);	//gardener
-//	
-//	if(GUI.Button(truckdriverB,"", guiStyle)) police();
-//	GUI.DrawTexture(truckdriverB, buttonTextureArray[9] as Texture, ScaleMode.StretchToFill);	//truckdriver
+	if(GUI.Button(cleanerB,"", guiStyle)) cleaner();
+	GUI.DrawTexture(cleanerB, buttonTextureArray[5] as Texture, ScaleMode.StretchToFill);	//cleaner
+	
+	if(GUI.Button(truckDriverB,"", guiStyle)) truckDriver();
+	GUI.DrawTexture(truckDriverB, buttonTextureArray[6] as Texture, ScaleMode.StretchToFill);	//truckdriver
 
-//	if(GUI.Button(chefB,"", guiStyle)) police();
-//	GUI.DrawTexture(chefB, buttonTextureArray[10] as Texture, ScaleMode.StretchToFill);	//chef
-
-//	if(GUI.Button(airhostessB,"", guiStyle)) police();
-//	GUI.DrawTexture(airhostessB, buttonTextureArray[11] as Texture, ScaleMode.StretchToFill);	//airhostess
+	if(GUI.Button(airHostessB,"", guiStyle)) airHostess();
+	GUI.DrawTexture(airHostessB, buttonTextureArray[7] as Texture, ScaleMode.StretchToFill);	//airhostess
+	
+	if(GUI.Button(mechanicB,"", guiStyle)) mechanic();
+	GUI.DrawTexture(mechanicB, buttonTextureArray[8] as Texture, ScaleMode.StretchToFill);	//mechanic
+	
+	if(GUI.Button(waiterB,"", guiStyle)) waiter();
+	GUI.DrawTexture(waiterB, buttonTextureArray[9] as Texture, ScaleMode.StretchToFill);	//waiter
 	
 	GUI.Label(Rect(20, 20, Screen.width, 100), "Kies hier je baan", textStyle);
 }
@@ -227,26 +267,20 @@ function fillButtonTextureArray():void
 	 texture = searchButtonTexture("Policeman");
 	 buttonTextureArray.push(texture);
 	 
-//	 texture = searchButtonTexture("Cleaner");
-//	 buttonTextureArray.push(texture);
-//	 
-//	 texture = searchButtonTexture("Lifeguard");
-//	 buttonTextureArray.push(texture);
-//	 
-//	 texture = searchButtonTexture("Farmer");
-//	 buttonTextureArray.push(texture);
-//	 
-//	 texture = searchButtonTexture("Gardener");
-//	 buttonTextureArray.push(texture);
-//	 
-//	 texture = searchButtonTexture("Truckdriver");
-//	 buttonTextureArray.push(texture);
-//	 
-//	 texture = searchButtonTexture("Chef");
-//	 buttonTextureArray.push(texture);
-//	 
-//	 texture = searchButtonTexture("AirHostess");
-//	 buttonTextureArray.push(texture);
+	 texture = searchButtonTexture("Cleaner");
+	 buttonTextureArray.push(texture);
+	 
+	 texture = searchButtonTexture("Truckdriver");
+	 buttonTextureArray.push(texture);
+	 
+	 texture = searchButtonTexture("AirHostess");
+	 buttonTextureArray.push(texture);
+	 
+	 texture = searchButtonTexture("Mechanic");
+	 buttonTextureArray.push(texture);
+	 
+	 texture = searchButtonTexture("Waiter");
+	 buttonTextureArray.push(texture);
 
 }
 

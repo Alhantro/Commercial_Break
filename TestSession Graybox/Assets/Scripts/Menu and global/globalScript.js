@@ -12,6 +12,12 @@ private var showMenu:boolean = false;
 private var state:String = "Menu";
 private var handPosition:Vector3;			//Hand Cursor
 
+//texture loading
+private var counter:int = 0;
+private var totalAmountLoading:int = 0;
+private var loading:boolean = true;
+private var loadingTextures:boolean = true;
+
 private var jobScene:boolean = false;
 
 static var createdIndestructable:boolean = false;	//if it is already created then its true
@@ -23,6 +29,7 @@ function Awake()
 	{
 		DontDestroyOnLoad(this.gameObject);		//make sure this object is not destroyed on load!
 		createdIndestructable = true;			//first creation of indestructable
+		gameObject.GetComponent(TextureLoader).buildTextureArrays();
 	}
 	else	//indestructable is created so there is a double.. destroy it
 	{
@@ -32,58 +39,94 @@ function Awake()
 
 function OnGUI()
 {
-	//if(debugMode)
-	//{
-	//	GUI.Label(Rect(0,0, 300, Screen.width), debug);
-	//}
-	
-	//if you press escape show the menu
-	if(Input.GetKeyUp("escape") && ingameMenu == true && showMenu == false)
+	if(loadingTextures)
 	{
-		showMenu = true;
+	
+		GUI.DrawTexture(Rect(0,0,Screen.width, Screen.height), this.gameObject.GetComponent(TextureLoader).getLoadingScreen());
+		GUI.Label(Rect(Screen.width / 2, Screen.height / 2, 200, 200), checkLoading());
+	
 	}
-	
-//	if(state == "Menu")
-//	{
-//		if(GUI.Button(Rect(Screen.width - 100,Screen.height - 100,100,100), debugButton))
-//		{
-//			if(debugMode)
-//			{
-//				debugMode = false;
-//				debugButton = "Debug Off";
-//			}
-//			else
-//			{
-//				debugMode = true;
-//				debugButton = "Debug On";
-//			}
-//		}
-//	}
-	
-	//show the menu
-	if(ingameMenu == true && showMenu == true)
+	else
 	{
-		//resume button
-		if(GUI.Button(Rect(Screen.width / 2 - 50, (Screen.height /2) - 50, 100, 25),"Doorgaan"))
+		//if(debugMode)
+		//{
+		//	GUI.Label(Rect(0,0, 300, Screen.width), debug);
+		//}
+		
+		//if you press escape show the menu
+		if(Input.GetKeyUp("escape") && ingameMenu == true && showMenu == false)
 		{
-			showMenu = false;
+			showMenu = true;
 		}
-		//quit button
-		if(GUI.Button(Rect(Screen.width / 2 - 100, (Screen.height /2) , 200, 25),"Terug naar het hoofdmenu"))
+		
+	//	if(state == "Menu")
+	//	{
+	//		if(GUI.Button(Rect(Screen.width - 100,Screen.height - 100,100,100), debugButton))
+	//		{
+	//			if(debugMode)
+	//			{
+	//				debugMode = false;
+	//				debugButton = "Debug Off";
+	//			}
+	//			else
+	//			{
+	//				debugMode = true;
+	//				debugButton = "Debug On";
+	//			}
+	//		}
+	//	}
+		
+		//show the menu
+		if(ingameMenu == true && showMenu == true)
 		{
-			disableIngameMenu();
-			showMenu = false;
-			state = "Menu";
-			Application.LoadLevel("MenuScene");
+			//resume button
+			if(GUI.Button(Rect(Screen.width / 2 - 50, (Screen.height /2) - 50, 100, 25),"Doorgaan"))
+			{
+				showMenu = false;
+			}
+			//quit button
+			if(GUI.Button(Rect(Screen.width / 2 - 100, (Screen.height /2) , 200, 25),"Terug naar het hoofdmenu"))
+			{
+				disableIngameMenu();
+				showMenu = false;
+				state = "Menu";
+				Application.LoadLevel("MenuScene");
+			}
 		}
-	}
 	
+	}
+}
 
+private function checkLoading():String
+{
+	if(counter != 0)
+	{
+		var _count:int = counter * 100;
+		var isLoaded:int = (_count / totalAmountLoading);
+		
+		if(isLoaded == 100) 
+		{
+			loadingTextures = false;
+		}
+		return isLoaded.ToString();
+	}
+	
+	return "";
 }
 
 //
 //	Setters
 //
+public function setLoading(value:boolean):void
+{
+	loading = value;
+}
+
+public function setLoadingTextures(value:boolean):void
+{
+	loadingTextures = value;
+}
+
 public function enableIngameMenu():void
 {
 	ingameMenu = true;
@@ -98,6 +141,21 @@ public function addToDebug(message:String):void
 {
 	debug = debug + "\n" + message;
 	//debug = message;
+}
+
+public function setAmountTexturesLoading(value:int):void
+{
+	totalAmountLoading = value;
+}
+
+public function deductFromLoading():void
+{
+	totalAmountLoading --;
+}
+
+public function increaseCounter():void
+{
+	counter++;
 }
 
 public function setState(value:String):void
@@ -133,6 +191,12 @@ public function setJobSceneBool(bool:boolean):void
 //
 //	Getters
 //
+public function doneLoading():boolean
+{
+	if(loading) return false;
+	else return true;
+}
+
 public function getJobName():String
 {
 	return jobString;
@@ -145,7 +209,7 @@ public function getAmountCorrect():int
 
 public function getAmountBoxes():int
 {
-	//check first if its higher than 16, the game is not built for higher than 10
+	//check first if its higher than 16, the game is not built for higher than 16
 	if(amount_Boxes > 16) setAmountBoxes(16);
 	return amount_Boxes;
 }

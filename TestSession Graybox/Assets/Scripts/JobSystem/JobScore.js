@@ -21,7 +21,7 @@ private var guiStyle:GUIStyle = new GUIStyle();
 function Awake()
 {
 	guiStyle.fontSize = 24;
-	endJobButtonTexture = searchTexture("Backbutton");
+	endJobButtonTexture = GameObject.Find("indestructable").GetComponent(TextureLoader).getTexture("JobBackbutton");
 }
 
 public function endJob():void
@@ -54,7 +54,6 @@ function Update()
 			seconds = 0;
 			timer = 0;
 		}
-		
 		//Debug.Log(seconds);
 	}
 }
@@ -108,20 +107,20 @@ function OnGUI()
 	}
 }
 
-function searchTexture(name:String):Texture2D
-{
-	var filePath:String = Application.dataPath + "/ButtonTextures/JobScene";
-	var fileInfo = Directory.GetFiles(filePath, name+".png" , SearchOption.AllDirectories);
-	
-	for(file in fileInfo)
-	{
-		//new WWW download
-		var wwwPNG = new WWW("file://"+file);
-		
-	}
-	
-	return wwwPNG.texture;
-}
+//function searchTexture(name:String):Texture2D
+//{
+//	var filePath:String = Application.dataPath + "/ButtonTextures/JobScene";
+//	var fileInfo = Directory.GetFiles(filePath, name+".png" , SearchOption.AllDirectories);
+//	
+//	for(file in fileInfo)
+//	{
+//		//new WWW download
+//		var wwwPNG = new WWW("file://"+file);
+//		
+//	}
+//	
+//	return wwwPNG.texture;
+//}
 
 private function backToSelect()
 {

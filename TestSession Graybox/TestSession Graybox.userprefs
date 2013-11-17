@@ -1,0 +1,16 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Menu and global\MenuScript.js">
+    <Files>
+      <File FileName="Assets\Scripts\Menu and global\TextureLoader.js" Line="26" Column="17" />
+      <File FileName="Assets\Scripts\Menu and global\globalScript.js" Line="110" Column="4" />
+      <File FileName="Assets\Scripts\Menu and global\MenuScript.js" Line="268" Column="36" />
+      <File FileName="Assets\Scripts\City\Initializer\CityInitializer.js" Line="23" Column="64" />
+      <File FileName="Assets\Scripts\JobSystem\JobScore.js" Line="24" Column="100" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
