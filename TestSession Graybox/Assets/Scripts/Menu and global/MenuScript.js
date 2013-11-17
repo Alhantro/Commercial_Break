@@ -235,80 +235,47 @@ function OnGUI() {
 		if (m_menuMode == 0)
 		{
 			if(GUI.Button(startGameB	,	""	,	guiStyle)) startGame();									//Start Game
-			GUI.DrawTexture(startGameB, buttonTextureArray[0] as Texture, ScaleMode.StretchToFill);
+			GUI.DrawTexture(startGameB, GameObject.Find("indestructable").GetComponent(TextureLoader).getTexture("Startgame"), ScaleMode.StretchToFill);
 			
 			if(GUI.Button(optionsB		, 	""	,	guiStyle)) options();					//Options
-			GUI.DrawTexture(optionsB, buttonTextureArray[1] as Texture, ScaleMode.StretchToFill);
+			GUI.DrawTexture(optionsB, GameObject.Find("indestructable").GetComponent(TextureLoader).getTexture("Options"), ScaleMode.StretchToFill);
 			
 			if(GUI.Button(leaveGameB	, 	""	,	guiStyle)) leaveGame();				//Leave Game
-			GUI.DrawTexture(leaveGameB, buttonTextureArray[2] as Texture, ScaleMode.StretchToFill);
+			GUI.DrawTexture(leaveGameB, GameObject.Find("indestructable").GetComponent(TextureLoader).getTexture("Leavegame"), ScaleMode.StretchToFill);
 		}
 		if (m_menuMode == 1)
 		{
 			if(GUI.Button(resolution1	, 	""	,	guiStyle)) setResolution1();			//Set 1920x1080
-			GUI.DrawTexture(resolution1, buttonTextureArray[3] as Texture, ScaleMode.StretchToFill);
+			GUI.DrawTexture(resolution1, GameObject.Find("indestructable").GetComponent(TextureLoader).getTexture("Resolution1080p"), ScaleMode.StretchToFill);
 			
 			if(GUI.Button(resolution2	,	""	,	guiStyle)) setResolution2();			//Set 1280x720
-			GUI.DrawTexture(resolution2, buttonTextureArray[4] as Texture, ScaleMode.StretchToFill);
+			GUI.DrawTexture(resolution2, GameObject.Find("indestructable").GetComponent(TextureLoader).getTexture("Resolution720p"), ScaleMode.StretchToFill);
 			
 			if(GUI.Button(backButton1	,	""	,	guiStyle)) backToMenu();				//Back to Menu
-			GUI.DrawTexture(backButton1, buttonTextureArray[5] as Texture, ScaleMode.StretchToFill);
+			GUI.DrawTexture(backButton1, GameObject.Find("indestructable").GetComponent(TextureLoader).getTexture("Backbutton"), ScaleMode.StretchToFill);
 		}
 		if (m_menuMode == 2)
 		{
 			if(GUI.Button(easy		,	""	,	guiStyle)) easyMode();						//Set Easy
-			GUI.DrawTexture(easy, buttonTextureArray[6] as Texture, ScaleMode.StretchToFill);
+			GUI.DrawTexture(easy, GameObject.Find("indestructable").GetComponent(TextureLoader).getTexture("Easy"), ScaleMode.StretchToFill);
 			
 			if(GUI.Button(normal	,	""	,	guiStyle)) normalMode();					//Set Normal
-			GUI.DrawTexture(normal, buttonTextureArray[7] as Texture, ScaleMode.StretchToFill);
+			GUI.DrawTexture(normal, GameObject.Find("indestructable").GetComponent(TextureLoader).getTexture("Medium"), ScaleMode.StretchToFill);
 			
 			if(GUI.Button(hard		,	""	,	guiStyle)) hardMode();						//Set Hard
-			GUI.DrawTexture(hard, buttonTextureArray[8] as Texture, ScaleMode.StretchToFill);
+			GUI.DrawTexture(hard, GameObject.Find("indestructable").GetComponent(TextureLoader).getTexture("Hard"), ScaleMode.StretchToFill);
 			
 			if(GUI.Button(backButton2,	""	,	guiStyle)) backToMenu();				//Back to Menu
-			GUI.DrawTexture(backButton2, buttonTextureArray[5] as Texture, ScaleMode.StretchToFill);
+			GUI.DrawTexture(backButton2, GameObject.Find("indestructable").GetComponent(TextureLoader).getTexture("Backbutton"), ScaleMode.StretchToFill);
 		}
 	}
 	else
 	{
-		if(buttonTextureArray.length == 9)
+		if(GameObject.Find("indestructable").GetComponent(TextureLoader).doneLoadingTex())
 		{
 			doneLoadingButtons = true;
 		}
 	}
-}
-
-
-function fillButtonTextureArray():void
-{
-	 var texture:Texture2D = null;
-	 
-	 texture = GameObject.Find("indestructable").GetComponent(TextureLoader).getTexture("Startgame");
-	 buttonTextureArray.push(texture);
-	 
-	 texture = GameObject.Find("indestructable").GetComponent(TextureLoader).getTexture("Options");
-	 buttonTextureArray.push(texture);
-	 
-	 texture = GameObject.Find("indestructable").GetComponent(TextureLoader).getTexture("Leavegame");
-	 buttonTextureArray.push(texture);
-	 
-	 texture = GameObject.Find("indestructable").GetComponent(TextureLoader).getTexture("Resolution1080p");
-	 buttonTextureArray.push(texture);
-	 
-	 texture = GameObject.Find("indestructable").GetComponent(TextureLoader).getTexture("Resolution720p");
-	 buttonTextureArray.push(texture);
-	 
-	 texture = GameObject.Find("indestructable").GetComponent(TextureLoader).getTexture("Backbutton");
-	 buttonTextureArray.push(texture);
-	 
-	 texture = GameObject.Find("indestructable").GetComponent(TextureLoader).getTexture("Easy");
-	 buttonTextureArray.push(texture);
-	 
-	 texture = GameObject.Find("indestructable").GetComponent(TextureLoader).getTexture("Medium");
-	 buttonTextureArray.push(texture);
-	 
-	 texture = GameObject.Find("indestructable").GetComponent(TextureLoader).getTexture("Hard");
-	 buttonTextureArray.push(texture);
 }
 
 

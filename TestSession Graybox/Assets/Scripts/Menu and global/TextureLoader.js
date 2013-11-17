@@ -7,7 +7,10 @@ import System.IO;
 //private variables
 private var textureArray:Array = new Array();
 private var textureNameArray:Array = new Array();
+private var doneLoadingTextures:boolean = false;
+
 static var LoadingScreenLoaded:boolean = false;
+
 
 public function buildTextureArrays():IEnumerator
 {
@@ -33,7 +36,13 @@ public function buildTextureArrays():IEnumerator
 		}
 	}
 	//textures are filled so ready to fill the buttons
-	GameObject.Find("ScriptHolder").GetComponent(MenuScript).fillButtonTextureArray();
+	//GameObject.Find("ScriptHolder").GetComponent(MenuScript).fillButtonTextureArray();
+	doneLoadingTextures = true;
+}
+
+public function doneLoadingTex():boolean
+{
+	return doneLoadingTextures;
 }
 
 private function pngExistsInArray(file:String):boolean
