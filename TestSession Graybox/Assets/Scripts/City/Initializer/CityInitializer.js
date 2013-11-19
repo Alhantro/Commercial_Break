@@ -7,20 +7,20 @@ import System.IO;	//needed for File IO (example: File.Exists)
 private var textStyle:GUIStyle = new GUIStyle();
 public var buttonTexture:Texture2D[];
 
-private var buttonWidth:int = 200;
-private var buttonHeight:int = 180;
+private var buttonWidth:int = 190;
+private var buttonHeight:int = 190;
 
-private var fireB 			: Rect 	= Rect(20							, Screen.height / 10, buttonWidth, buttonHeight);
-private var armyB 			: Rect 	= Rect(20 +  buttonWidth    + 10	, Screen.height / 10, buttonWidth, buttonHeight);
-private var marineB 		: Rect 	= Rect(20 + (buttonWidth*2) + 20	, Screen.height / 10, buttonWidth, buttonHeight);
-private var nurseB 			: Rect 	= Rect(20 + (buttonWidth*3) + 30	, Screen.height / 10, buttonWidth, buttonHeight);
-private var policeB 		: Rect 	= Rect(20 + (buttonWidth*4) + 40	, Screen.height / 10, buttonWidth, buttonHeight);
+private var fireB 			: Rect 	= Rect(55							, 120, buttonWidth, buttonHeight);
+private var armyB 			: Rect 	= Rect(110 	+ 	 buttonWidth		, 120, buttonWidth, buttonHeight);
+private var marineB 		: Rect 	= Rect(165 	+	(buttonWidth * 2)	, 120, buttonWidth, buttonHeight);
+private var nurseB 			: Rect 	= Rect(220 	+	(buttonWidth * 3)	, 120, buttonWidth, buttonHeight);
+private var policeB 		: Rect 	= Rect(275 	+	(buttonWidth * 4)	, 120, buttonWidth, buttonHeight);
 
-private var cleanerB 		: Rect 	= Rect(20							, Screen.height / 10 + buttonHeight+80, buttonWidth, buttonHeight);
-private var truckDriverB 	: Rect 	= Rect(20 +  buttonWidth    + 10	, Screen.height / 10 + buttonHeight+80, buttonWidth, buttonHeight);
-private var airHostessB 	: Rect 	= Rect(20 + (buttonWidth*2) + 20	, Screen.height / 10 + buttonHeight+80, buttonWidth, buttonHeight);
-private var mechanicB 		: Rect 	= Rect(20 + (buttonWidth*3) + 30	, Screen.height / 10 + buttonHeight+80, buttonWidth, buttonHeight);
-private var waiterB 		: Rect 	= Rect(20 + (buttonWidth*4) + 40	, Screen.height / 10 + buttonHeight+80, buttonWidth, buttonHeight);
+private var cleanerB 		: Rect 	= Rect(55							, Screen.height - 250, buttonWidth, buttonHeight);
+private var truckDriverB 	: Rect 	= Rect(110	+  buttonWidth			, Screen.height - 250, buttonWidth, buttonHeight);
+private var airHostessB 	: Rect 	= Rect(165	+ (buttonWidth * 2)		, Screen.height - 250, buttonWidth, buttonHeight);
+private var mechanicB 		: Rect 	= Rect(220	+ (buttonWidth * 3)		, Screen.height - 250, buttonWidth, buttonHeight);
+private var waiterB 		: Rect 	= Rect(275	+ (buttonWidth * 4)		, Screen.height - 250, buttonWidth, buttonHeight);
 
 //make new rectangles if you need more buttons
 //syntax
@@ -245,7 +245,7 @@ function OnGUI()
 	if(GUI.Button(waiterB,"", guiStyle)) waiter();
 	GUI.DrawTexture(waiterB, buttonTextureArray[9] as Texture, ScaleMode.StretchToFill);	//waiter
 	
-	GUI.Label(Rect(20, 20, Screen.width, 100), "Kies hier je baan", textStyle);
+	GUI.Label(Rect(55, 20, Screen.width, 100), "Kies hier je baan", textStyle);
 }
 
 function fillButtonTextureArray():void
@@ -294,7 +294,6 @@ function searchButtonTexture(name:String):Texture2D
 	{
 		//new WWW download
 		var wwwPNG = new WWW("file://"+file);
-		
 	}
 	
 	return wwwPNG.texture;

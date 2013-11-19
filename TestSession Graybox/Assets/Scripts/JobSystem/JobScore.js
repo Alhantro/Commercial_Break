@@ -9,19 +9,21 @@ private var score : int;
 
 private var handPos : Vector3;
 
-private var endTextRect : Rect = Rect ((Screen.width / 2 - 300), (Screen.height / 2 - 250), 600, 400);
-private var endRect : Rect = Rect((Screen.width / 2 - 100), (Screen.height / 2 + 150), 400, 75);
+private var endTextRect : Rect = Rect 	((Screen.width / 2 - 300), (Screen.height / 2 - 300), 600, 600);
+private var endRect 	: Rect = Rect	((Screen.width / 2 - 100), (Screen.height / 2 + 150), 200, 100);
 
 private var timer:float;
 private var seconds:float;
 
 private var endJobButtonTexture:Texture2D;
+private var endJobCertificate:Texture2D;
 private var guiStyle:GUIStyle = new GUIStyle();
 
 function Awake()
 {
 	guiStyle.fontSize = 24;
 	endJobButtonTexture = GameObject.Find("indestructable").GetComponent(TextureLoader).getTexture("JobBackbutton");
+	endJobCertificate = GameObject.Find("indestructable").GetComponent(TextureLoader).getTexture("Certificate");
 }
 
 public function endJob():void
@@ -98,7 +100,8 @@ function OnGUI()
 	
 	if(setButton)
 	{
-		GUI.Button (endTextRect, endString, guiStyle);
+		//GUI.Button (endTextRect, endString, guiStyle);
+		GUI.DrawTexture(endTextRect, endJobCertificate);
 		GUI.DrawTexture(endRect, endJobButtonTexture, ScaleMode.StretchToFill);	//ending job button
 		if(GUI.Button(endRect , "", guiStyle))
 		{

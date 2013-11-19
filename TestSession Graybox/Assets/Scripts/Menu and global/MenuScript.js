@@ -1,7 +1,7 @@
 #pragma strict
 #pragma downcast
-	private var m_ratiox:int = Screen.width / 5;
-	private var m_ratioy:int = Screen.height / 20;
+	private var m_ratiox:int = 0;
+	private var m_ratioy:int = 0;
 	private var m_BoxesValue:int = 6;
 	private var m_CorrectBoxesValue:int = 1;
 	private var m_menuMode:int = 0;
@@ -9,7 +9,7 @@
 	private var handPos : Vector3;
 	
 // Button rectangles
-	private var startGameB 	: Rect = Rect((Screen.width / 2 - m_ratiox /2)	, (Screen.height / 2 - m_ratioy /2 - m_ratioy * 3)	, m_ratiox, m_ratioy * 2);
+	private var startGameB 	: Rect = Rect(Screen.width / 2 - 150, Screen.height / 2 - 250, 300, 100);
 	private var optionsB 	: Rect = Rect((Screen.width / 2 - m_ratiox /2)	, (Screen.height / 2 - m_ratioy /2 )				, m_ratiox, m_ratioy * 2);
 	private var leaveGameB 	: Rect = Rect((Screen.width / 2 - m_ratiox /2)	, (Screen.height / 2 - m_ratioy /2 + m_ratioy * 3)	, m_ratiox, m_ratioy * 2);
 	
@@ -17,9 +17,9 @@
 	private var resolution2 : Rect = Rect((Screen.width / 2 - m_ratiox /2)	, (Screen.height / 2 - m_ratioy /2 )				, m_ratiox, m_ratioy * 2);
 	private var backButton1 : Rect = Rect((Screen.width / 2 - m_ratiox /2)	, (Screen.height / 2 - m_ratioy /2 + m_ratioy * 7)	, m_ratiox, m_ratioy * 2);
 	
-	private var easy 		: Rect = Rect((Screen.width / 2 - m_ratiox /2 - m_ratiox * 1.1)		, (Screen.height / 2 - m_ratioy /2 + m_ratioy * 4)	, m_ratiox, m_ratioy * 2);
-	private var normal 		: Rect = Rect((Screen.width / 2 - m_ratiox /2)						, (Screen.height / 2 - m_ratioy /2 + m_ratioy * 4)	, m_ratiox, m_ratioy * 2);
-	private var hard 		: Rect = Rect((Screen.width / 2 - m_ratiox /2 + m_ratiox * 1.1)		, (Screen.height / 2 - m_ratioy /2 + m_ratioy * 4)	, m_ratiox, m_ratioy * 2);
+	private var easy 		: Rect = Rect(95					, 	Screen.height / 2 - 50	, 300, 100);
+	private var normal 		: Rect = Rect(490					,	Screen.height / 2 - 50	, 300, 100);
+	private var hard 		: Rect = Rect(Screen.width - 395	,	Screen.height / 2 - 50	, 300, 100);
 	private var backButton2 : Rect = Rect((Screen.width / 2 - m_ratiox /2)						, (Screen.height / 2 - m_ratioy /2 + m_ratioy * 7)	, m_ratiox, m_ratioy * 2);
 	
 	private var rectArray : Array = new Array();
