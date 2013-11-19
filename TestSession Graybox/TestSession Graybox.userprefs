@@ -1,15 +1,19 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\JobSystem\Initializer\Initialization.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\JobSystem\JobScore.js">
     <Files>
-      <File FileName="Assets\Scripts\JobSystem\Initializer\Initialization.js" Line="110" Column="34" />
-      <File FileName="Assets\Scripts\Menu and global\MenuScript.js" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\City\Initializer\CityInitializer.js" Line="256" Column="2" />
+      <File FileName="Assets\Scripts\Menu and global\MenuScript.js" Line="63" Column="5" />
+      <File FileName="Assets\Scripts\JobSystem\Initializer\Initialization.js" Line="65" Column="52" />
+      <File FileName="Assets\Scripts\City\Initializer\CityInitializer.js" Line="8" Column="8" />
       <File FileName="Assets\Scripts\JobSystem\JobScore.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Menu and global\TextureLoader.js" Line="13" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="C:\Users\MaskedMouse\Desktop\School\Github\Commercial_Break\TestSession Graybox\Assets\Scripts\Menu and global\MenuScript.js" line="244" />
+      <Breakpoint file="C:\Users\MaskedMouse\Desktop\School\Github\Commercial_Break\TestSession Graybox\Assets\Scripts\Menu and global\MenuScript.js" line="63" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

@@ -1,26 +1,22 @@
 #pragma strict
 #pragma downcast
-	private var m_ratiox:int = 0;
-	private var m_ratioy:int = 0;
 	private var m_BoxesValue:int = 6;
 	private var m_CorrectBoxesValue:int = 1;
 	private var m_menuMode:int = 0;
 	
 	private var handPos : Vector3;
 	
-// Button rectangles
-	private var startGameB 	: Rect = Rect(Screen.width / 2 - 150, Screen.height / 2 - 250, 300, 100);
-	private var optionsB 	: Rect = Rect((Screen.width / 2 - m_ratiox /2)	, (Screen.height / 2 - m_ratioy /2 )				, m_ratiox, m_ratioy * 2);
-	private var leaveGameB 	: Rect = Rect((Screen.width / 2 - m_ratiox /2)	, (Screen.height / 2 - m_ratioy /2 + m_ratioy * 3)	, m_ratiox, m_ratioy * 2);
+// Button rectangles for kinect
+	private var startGameB 	: Rect = Rect(Screen.width / 2 - 150	, Screen.height / 2 - 200	, 300, 100);
+	private var optionsB 	: Rect = Rect(Screen.width / 2 - 150	, Screen.height / 2	- 50	, 300, 100);
+	private var leaveGameB 	: Rect = Rect(Screen.width / 2 - 150	, Screen.height / 2 + 100	, 300, 100);
 	
-	private var resolution1 : Rect = Rect((Screen.width / 2 - m_ratiox /2)	, (Screen.height / 2 - m_ratioy /2 - m_ratioy * 2)	, m_ratiox, m_ratioy * 2);
-	private var resolution2 : Rect = Rect((Screen.width / 2 - m_ratiox /2)	, (Screen.height / 2 - m_ratioy /2 )				, m_ratiox, m_ratioy * 2);
-	private var backButton1 : Rect = Rect((Screen.width / 2 - m_ratiox /2)	, (Screen.height / 2 - m_ratioy /2 + m_ratioy * 7)	, m_ratiox, m_ratioy * 2);
+	private var backButton1 : Rect = Rect(Screen.width / 2 - 150	, Screen.height / 2 + 100	, 300, 100);
 	
-	private var easy 		: Rect = Rect(95					, 	Screen.height / 2 - 50	, 300, 100);
-	private var normal 		: Rect = Rect(490					,	Screen.height / 2 - 50	, 300, 100);
-	private var hard 		: Rect = Rect(Screen.width - 395	,	Screen.height / 2 - 50	, 300, 100);
-	private var backButton2 : Rect = Rect((Screen.width / 2 - m_ratiox /2)						, (Screen.height / 2 - m_ratioy /2 + m_ratioy * 7)	, m_ratiox, m_ratioy * 2);
+	private var easy 		: Rect = Rect(95						, 	Screen.height / 2 - 150	, 300, 100);
+	private var normal 		: Rect = Rect(490						,	Screen.height / 2 - 150	, 300, 100);
+	private var hard 		: Rect = Rect(Screen.width - 395		,	Screen.height / 2 - 150	, 300, 100);
+	private var backButton2 : Rect = Rect(Screen.width / 2 - 150	,	Screen.height / 2 + 100	, 300, 100);
 	
 	private var rectArray : Array = new Array();
 	//private var rectArrayNames : Array = new Array();
@@ -38,7 +34,7 @@
 function Awake()
 {
 	backgroundTexture = searchBackgroundTexture("background");
-	rectArray.Push(startGameB, optionsB, leaveGameB, resolution1, resolution2, backButton1, easy, normal, hard, backButton2);
+	rectArray.Push(startGameB, optionsB, leaveGameB, backButton1, easy, normal, hard, backButton2);
 	
 	for(var i=0; i<rectArray.length; i++)
 	{
@@ -63,8 +59,9 @@ function Update ()
 	}
 	if (m_menuMode == 1)
 	{
-		if(checkInButton(resolution1)) setResolution1();;
-		if(checkInButton(resolution2)) setResolution2();
+		//mute button implementation
+		//
+		//
 		if(checkInButton(backButton1)) backToMenu();
 	}
 	if (m_menuMode == 2)
@@ -149,17 +146,17 @@ private function leaveGame():void
 	Application.Quit();
 }
 
-private function setResolution1():void
-{
-	SetResolution(1920, 1080);
-	return;
-}
-
-private function setResolution2():void
-{
-	SetResolution(1280, 720);
-	return;
-}
+//private function setResolution1():void
+//{
+//	SetResolution(1920, 1080);
+//	return;
+//}
+//
+//private function setResolution2():void
+//{
+//	SetResolution(1280, 720);
+//	return;
+//}
 
 private function backToMenu():void
 {
@@ -192,11 +189,9 @@ private function hardMode():void
 	GameObject.Find("indestructable").GetComponent(globalScript).setAmountCorrect(3);
 }
 
-function SetResolution(width:int, height:int):void {
-	m_ratiox = width / 5;
-	m_ratioy = height / 20;
+function SetResolution(width:int, height:int):void
+{
 	Screen.SetResolution(width, height, false);
-	
 }
 
 /*
@@ -245,12 +240,9 @@ function OnGUI() {
 		}
 		if (m_menuMode == 1)
 		{
-			if(GUI.Button(resolution1	, 	""	,	guiStyle)) setResolution1();			//Set 1920x1080
-			GUI.DrawTexture(resolution1, GameObject.Find("indestructable").GetComponent(TextureLoader).getTexture("Resolution1080p"), ScaleMode.StretchToFill);
-			
-			if(GUI.Button(resolution2	,	""	,	guiStyle)) setResolution2();			//Set 1280x720
-			GUI.DrawTexture(resolution2, GameObject.Find("indestructable").GetComponent(TextureLoader).getTexture("Resolution720p"), ScaleMode.StretchToFill);
-			
+			//
+			//Mute button implementation needed
+			//
 			if(GUI.Button(backButton1	,	""	,	guiStyle)) backToMenu();				//Back to Menu
 			GUI.DrawTexture(backButton1, GameObject.Find("indestructable").GetComponent(TextureLoader).getTexture("Backbutton"), ScaleMode.StretchToFill);
 		}

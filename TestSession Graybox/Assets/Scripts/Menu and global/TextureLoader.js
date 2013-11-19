@@ -11,7 +11,7 @@ private var doneLoadingTextures:boolean = false;
 
 static var LoadingScreenLoaded:boolean = false;
 
-
+//loads button textures for the menu
 public function buildTextureArrays():IEnumerator
 {
 	var filePath:String = Application.dataPath + "/ButtonTextures";

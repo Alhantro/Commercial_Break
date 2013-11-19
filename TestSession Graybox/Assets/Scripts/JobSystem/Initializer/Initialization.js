@@ -62,7 +62,7 @@ private function loadAssets()
 	//var filePath:String = "";
 	var filePath:String = Application.dataPath + "/JobTextures";
 	GameObject.Find("indestructable").GetComponent(globalScript).addToDebug(filePath);
-	var fileInfo = Directory.GetFiles(filePath, "*.*" , SearchOption.AllDirectories);
+	var fileInfo = Directory.GetFiles(filePath, "*.png" , SearchOption.AllDirectories);
 	
 	for(file in fileInfo)
 	{

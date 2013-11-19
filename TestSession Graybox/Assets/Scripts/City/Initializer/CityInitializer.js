@@ -5,7 +5,7 @@ import System.Xml;	//needed for XML reading
 import System.IO;	//needed for File IO (example: File.Exists)
 
 private var textStyle:GUIStyle = new GUIStyle();
-public var buttonTexture:Texture2D[];
+private var buttonTexture:Texture2D[];
 
 private var buttonWidth:int = 190;
 private var buttonHeight:int = 190;
@@ -31,22 +31,26 @@ private var waiterB 		: Rect 	= Rect(275	+ (buttonWidth * 4)		, Screen.height - 
 //uncomment it or add in the onGUI and fillButtonTextureArray functions to have the button placed and textured
 
 
-private var rectArray : Array = new Array();
-private var rectBoolArray : Array = new Array();
+private var rectArray 		: Array = new Array();
+private var rectBoolArray 	: Array = new Array();
 
-private var timer:float;
-private var seconds:float;
+private var timer	:float = 0.0;
+private var seconds	:float = 0.0;
 
 private var handPos : Vector3;
 
-private var buttonTextureArray:Array = new Array();
-private var guiStyle:GUIStyle = new GUIStyle();
+private var buttonTextureArray	:Array		= new Array();
+private var guiStyle			:GUIStyle	= new GUIStyle();
 
 function Awake()
 {
 	fillButtonTextureArray();
 	textStyle.fontSize = 24;
 	textStyle.normal.textColor = Color.white;
+
+//
+//	old code to spawn the City and texture the buildings using XML (removed the City cause the creative who should have made it got kicked)
+//
 //	//spawn the city
 //	var City:GameObject = Instantiate(Resources.Load("City", GameObject));
 //	//give the city the name City (else it will be City(Clone)
@@ -139,6 +143,104 @@ private function checkRectangles():void
 	}
 }
 
+function fillButtonTextureArray():void
+{
+	 var texture:Texture2D;
+	 
+	 //texture = searchButtonTexture("Fireman");
+	 texture = GameObject.Find("indestructable").GetComponent(TextureLoader).getTexture("Fireman");
+	 buttonTextureArray.push(texture);
+	 
+	 //texture = searchButtonTexture("Army");
+	 texture = GameObject.Find("indestructable").GetComponent(TextureLoader).getTexture("Army");
+	 buttonTextureArray.push(texture);
+	 
+	 //texture = searchButtonTexture("Marine");
+	 texture = GameObject.Find("indestructable").GetComponent(TextureLoader).getTexture("Marine");
+	 buttonTextureArray.push(texture);
+	 
+	 //texture = searchButtonTexture("Nurse");
+	 texture = GameObject.Find("indestructable").GetComponent(TextureLoader).getTexture("Nurse");
+	 buttonTextureArray.push(texture);
+	 
+	 //texture = searchButtonTexture("Policeman");
+	 texture = GameObject.Find("indestructable").GetComponent(TextureLoader).getTexture("Policeman");
+	 buttonTextureArray.push(texture);
+	 
+	 //texture = searchButtonTexture("Cleaner");
+	 texture = GameObject.Find("indestructable").GetComponent(TextureLoader).getTexture("Cleaner");
+	 buttonTextureArray.push(texture);
+	 
+	 //texture = searchButtonTexture("Truckdriver");
+	 texture = GameObject.Find("indestructable").GetComponent(TextureLoader).getTexture("Truckdriver");
+	 buttonTextureArray.push(texture);
+	 
+	 //texture = searchButtonTexture("AirHostess");
+	 texture = GameObject.Find("indestructable").GetComponent(TextureLoader).getTexture("AirHostess");
+	 buttonTextureArray.push(texture);
+	 
+	 //texture = searchButtonTexture("Mechanic");
+	 texture = GameObject.Find("indestructable").GetComponent(TextureLoader).getTexture("Mechanic");
+	 buttonTextureArray.push(texture);
+	 
+	 //texture = searchButtonTexture("Waiter");
+	 texture = GameObject.Find("indestructable").GetComponent(TextureLoader).getTexture("Waiter");
+	 buttonTextureArray.push(texture);
+
+}
+
+function OnGUI()
+{
+
+//
+//buttons without texture just a string
+//
+//	if(GUI.Button(fireB,"Brandweer")) fireman();
+//	if(GUI.Button(armyB,"Leger")) army();
+//	if(GUI.Button(marineB,"Marinier")) marine();
+//	if(GUI.Button(nurseB,"Verpleegster")) nurse(); 
+//	if(GUI.Button(policeB,"Politie")) police();
+//	
+//	GUI.Label(Rect(20, 20, Screen.width, 100), "Kies hier je baan", textStyle);
+
+
+//
+//buttons with textures
+//
+
+	if(GUI.Button(fireB,"", guiStyle)) fireman();
+	GUI.DrawTexture(fireB, buttonTextureArray[0] as Texture, ScaleMode.StretchToFill);			//fireman
+	
+	if(GUI.Button(armyB,"", guiStyle)) army();
+	GUI.DrawTexture(armyB, buttonTextureArray[1] as Texture, ScaleMode.StretchToFill);			//army
+	
+	if(GUI.Button(marineB,"", guiStyle)) marine();
+	GUI.DrawTexture(marineB, buttonTextureArray[2] as Texture, ScaleMode.StretchToFill);		//marine
+	
+	if(GUI.Button(nurseB,"", guiStyle)) nurse(); 
+	GUI.DrawTexture(nurseB, buttonTextureArray[3] as Texture, ScaleMode.StretchToFill);			//nurse
+	
+	if(GUI.Button(policeB,"", guiStyle)) police();
+	GUI.DrawTexture(policeB, buttonTextureArray[4] as Texture, ScaleMode.StretchToFill);		//police
+	
+	if(GUI.Button(cleanerB,"", guiStyle)) cleaner();
+	GUI.DrawTexture(cleanerB, buttonTextureArray[5] as Texture, ScaleMode.StretchToFill);		//cleaner
+	
+	if(GUI.Button(truckDriverB,"", guiStyle)) truckDriver();
+	GUI.DrawTexture(truckDriverB, buttonTextureArray[6] as Texture, ScaleMode.StretchToFill);	//truckdriver
+
+	if(GUI.Button(airHostessB,"", guiStyle)) airHostess();
+	GUI.DrawTexture(airHostessB, buttonTextureArray[7] as Texture, ScaleMode.StretchToFill);	//airhostess
+	
+	if(GUI.Button(mechanicB,"", guiStyle)) mechanic();
+	GUI.DrawTexture(mechanicB, buttonTextureArray[8] as Texture, ScaleMode.StretchToFill);		//mechanic
+	
+	if(GUI.Button(waiterB,"", guiStyle)) waiter();
+	GUI.DrawTexture(waiterB, buttonTextureArray[9] as Texture, ScaleMode.StretchToFill);		//waiter
+	
+	GUI.Label(Rect(55, 20, Screen.width, 100), "Kies hier je baan", textStyle);
+}
+
 private function fireman()
 {
 	GameObject.Find("indestructable").GetComponent(globalScript).setJob("Fireman");
@@ -199,111 +301,28 @@ private function waiter()
 	startGame();
 }
 
-
-function OnGUI()
-{
-//	if(GUI.Button(fireB,"Brandweer")) fireman();
-//	if(GUI.Button(armyB,"Leger")) army();
-//	if(GUI.Button(marineB,"Marinier")) marine();
-//	if(GUI.Button(nurseB,"Verpleegster")) nurse(); 
-//	if(GUI.Button(policeB,"Politie")) police();
-//	
-//	GUI.Label(Rect(20, 20, Screen.width, 100), "Kies hier je baan", textStyle);
-
-
-//
-//buttons with textures (functionality implementation, got no textures from creative so commented out)
-//
-
-	if(GUI.Button(fireB,"", guiStyle)) fireman();
-	GUI.DrawTexture(fireB, buttonTextureArray[0] as Texture, ScaleMode.StretchToFill);	//fireman
-	
-	if(GUI.Button(armyB,"", guiStyle)) army();
-	GUI.DrawTexture(armyB, buttonTextureArray[1] as Texture, ScaleMode.StretchToFill);	//army
-	
-	if(GUI.Button(marineB,"", guiStyle)) marine();
-	GUI.DrawTexture(marineB, buttonTextureArray[2] as Texture, ScaleMode.StretchToFill);	//marine
-	
-	if(GUI.Button(nurseB,"", guiStyle)) nurse(); 
-	GUI.DrawTexture(nurseB, buttonTextureArray[3] as Texture, ScaleMode.StretchToFill);	//nurse
-	
-	if(GUI.Button(policeB,"", guiStyle)) police();
-	GUI.DrawTexture(policeB, buttonTextureArray[4] as Texture, ScaleMode.StretchToFill);	//police
-	
-	if(GUI.Button(cleanerB,"", guiStyle)) cleaner();
-	GUI.DrawTexture(cleanerB, buttonTextureArray[5] as Texture, ScaleMode.StretchToFill);	//cleaner
-	
-	if(GUI.Button(truckDriverB,"", guiStyle)) truckDriver();
-	GUI.DrawTexture(truckDriverB, buttonTextureArray[6] as Texture, ScaleMode.StretchToFill);	//truckdriver
-
-	if(GUI.Button(airHostessB,"", guiStyle)) airHostess();
-	GUI.DrawTexture(airHostessB, buttonTextureArray[7] as Texture, ScaleMode.StretchToFill);	//airhostess
-	
-	if(GUI.Button(mechanicB,"", guiStyle)) mechanic();
-	GUI.DrawTexture(mechanicB, buttonTextureArray[8] as Texture, ScaleMode.StretchToFill);	//mechanic
-	
-	if(GUI.Button(waiterB,"", guiStyle)) waiter();
-	GUI.DrawTexture(waiterB, buttonTextureArray[9] as Texture, ScaleMode.StretchToFill);	//waiter
-	
-	GUI.Label(Rect(55, 20, Screen.width, 100), "Kies hier je baan", textStyle);
-}
-
-function fillButtonTextureArray():void
-{
-	 var texture:Texture2D;
-	 
-	 texture = searchButtonTexture("Fireman");
-	 buttonTextureArray.push(texture);
-	 
-	 texture = searchButtonTexture("Army");
-	 buttonTextureArray.push(texture);
-	 
-	 texture = searchButtonTexture("Marine");
-	 buttonTextureArray.push(texture);
-	 
-	 texture = searchButtonTexture("Nurse");
-	 buttonTextureArray.push(texture);
-	 
-	 texture = searchButtonTexture("Policeman");
-	 buttonTextureArray.push(texture);
-	 
-	 texture = searchButtonTexture("Cleaner");
-	 buttonTextureArray.push(texture);
-	 
-	 texture = searchButtonTexture("Truckdriver");
-	 buttonTextureArray.push(texture);
-	 
-	 texture = searchButtonTexture("AirHostess");
-	 buttonTextureArray.push(texture);
-	 
-	 texture = searchButtonTexture("Mechanic");
-	 buttonTextureArray.push(texture);
-	 
-	 texture = searchButtonTexture("Waiter");
-	 buttonTextureArray.push(texture);
-
-}
-
-
-function searchButtonTexture(name:String):Texture2D
-{
-	var filePath:String = Application.dataPath + "/ButtonTextures/CityScene";
-	var fileInfo = Directory.GetFiles(filePath, name+".png" , SearchOption.AllDirectories);
-	
-	for(file in fileInfo)
-	{
-		//new WWW download
-		var wwwPNG = new WWW("file://"+file);
-	}
-	
-	return wwwPNG.texture;
-}
-
-
 private function startGame():void
 {
 	Application.LoadLevel("jobScene");
 }
+
+
+//function searchButtonTexture(name:String):Texture2D
+//{
+//	var filePath:String = Application.dataPath + "/ButtonTextures/CityScene";
+//	var fileInfo = Directory.GetFiles(filePath, name+".png" , SearchOption.AllDirectories);
+//	
+//	for(file in fileInfo)
+//	{
+//		//new WWW download
+//		var wwwPNG = new WWW("file://"+file);
+//	}
+//	
+//	return wwwPNG.texture;
+//}
+
+
+
 
 //private function readXML():IEnumerator
 //{
