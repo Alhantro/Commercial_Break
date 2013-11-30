@@ -123,6 +123,5 @@ public function getTextureName(tex:Texture2D):String
 			return textureNameArray[i] as String;
 		}
 	}
-	
 	return "";
 }

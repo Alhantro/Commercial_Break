@@ -60,7 +60,7 @@
      <Compile Include="Assets\Scripts\Menu and global\globalScript.js" />
      <Compile Include="Assets\Scripts\SoundSystem\SoundPlayer.js" />
      <None Include="Assets\Scripts\City\XML\City.xml" />
-     <None Include="Assets\Asset\Shaders\Normal-Diffuse.shader" />
+     <None Include="Assets\Asset Kinect\Shaders\Normal-Diffuse.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

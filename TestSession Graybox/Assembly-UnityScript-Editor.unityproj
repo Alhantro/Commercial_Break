@@ -46,7 +46,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Editor\PostBuild.js" />
      <None Include="Assets\Scripts\City\XML\City.xml" />
-     <None Include="Assets\Asset\Shaders\Normal-Diffuse.shader" />
+     <None Include="Assets\Asset Kinect\Shaders\Normal-Diffuse.shader" />
  <Reference Include="UnityEditor.Graphs">
  <HintPath>C:\Program Files (x86)\Unity\Editor\Data\Managed\UnityEditor.Graphs.dll</HintPath>
  </Reference>

@@ -17,6 +17,8 @@ function Awake()
 {
 
 	GameObject.Find("indestructable").GetComponent(globalScript).setJobSceneBool(true);			//Set false in jobscore after completing job
+	job = new Jobs();
+	loadAssets();
 //	if(GameObject.Find("indestructable").GetComponent(globalScript).getJobName() == "Fireman")			//Fireman
 //	{
 //		job = new Fireman();
@@ -52,9 +54,6 @@ function Awake()
 //		GameObject.Find("indestructable").GetComponent(globalScript).addToDebug("Job is not initialized for some reason, might be wrong jobname!");
 //		Debug.LogError("Job is not initialized for some reason, might be wrong jobname!");
 //	}
-
-	job = new Jobs();
-	loadAssets();
 }
 
 private function loadAssets()

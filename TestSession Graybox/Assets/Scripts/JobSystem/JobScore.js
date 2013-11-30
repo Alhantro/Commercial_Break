@@ -17,6 +17,8 @@ private var seconds:float;
 
 private var endJobButtonTexture:Texture2D;
 private var endJobCertificate:Texture2D;
+private var starTexture:Texture2D;
+private var starOpenTexture:Texture2D;
 private var guiStyle:GUIStyle = new GUIStyle();
 
 function Awake()
@@ -24,14 +26,30 @@ function Awake()
 	guiStyle.fontSize = 24;
 	endJobButtonTexture = GameObject.Find("indestructable").GetComponent(TextureLoader).getTexture("JobBackbutton");
 	endJobCertificate = GameObject.Find("indestructable").GetComponent(TextureLoader).getTexture("Certificate");
+	starTexture = GameObject.Find("indestructable").GetComponent(TextureLoader).getTexture("StarClosed");
+	starOpenTexture = GameObject.Find("indestructable").GetComponent(TextureLoader).getTexture("StarOpen");
 }
 
 public function endJob():void
 {
 	//Function for Certificate & Score
 	//For Score we can also use a multiplication by time or other things to calculate a score.
-	
-	endString = ("Deze Baan is succesvol door jou uitgevoerd! Goed gedaan! \n Jouw Score is : " + score);
+	if(score == 0)
+	{
+		endString = "Helaas,\nmet de gekozen items kun je de baan niet uitvoeren.\nProbeer het nog een keer.";
+	}
+	else if(score == 1)
+	{
+		endString = "We kunnen op z'n minst één voorwerp gebruiken.\ngeef niet op je komt er wel!\nJe verdient 1 ster!";
+	}
+	else if(score == 2)
+	{
+		endString = "Netjes, maar we missen nog één voorwerp.\nJe verdient 2 sterren!";
+	}
+	else if(score == 3)
+	{
+		endString = "Deze Baan is succesvol door jou uitgevoerd!\nUitstekend gedaan!\nJe verdient 3 sterren!";
+	}
 	setButton = true;
 	//Debug.Log("Jouw Score is : " + score);
 	//Debug.Log("Deze Baan is succesvol door jou uitgevoerd! Goed gedaan!");
@@ -101,8 +119,19 @@ function OnGUI()
 	if(setButton)
 	{
 		//GUI.Button (endTextRect, endString, guiStyle);
-		GUI.DrawTexture(endTextRect, endJobCertificate);
+		GUI.DrawTexture(endTextRect, endJobCertificate);						//certificate texture
 		GUI.DrawTexture(endRect, endJobButtonTexture, ScaleMode.StretchToFill);	//ending job button
+		GUI.Label(Rect(endTextRect.x + 20, endTextRect.y + 20, endTextRect.width - 20, endTextRect.height - 20), endString, guiStyle);
+		
+		for(var i:int=0; i<score; i++)
+		{
+			GUI.DrawTexture(Rect((endTextRect.x + 50 + (175 * i)), (endTextRect.y + endTextRect.height / 2 - 75), endTextRect.width / 4, 150), starTexture);
+		}
+		for(var j:int=i; j<3; j++)
+		{
+			GUI.DrawTexture(Rect((endTextRect.x + 50 + (175 * j)), (endTextRect.y + endTextRect.height / 2 - 75), endTextRect.width / 4, 150), starOpenTexture);
+		}
+		
 		if(GUI.Button(endRect , "", guiStyle))
 		{
 			backToSelect();
