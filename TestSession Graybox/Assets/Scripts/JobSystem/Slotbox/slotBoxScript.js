@@ -2,11 +2,13 @@
 
 private var correct:boolean = false;
 private var selected:boolean = false;
+private var selectNumber:int;
 
-public function Update(){
+public function Update():void
+{
 	if(selected)
 	{
-		isSelected();
+		isSelected(selectNumber);
 	}
 }
 
@@ -31,7 +33,7 @@ public function getTexture():Texture2D
 	return this.renderer.material.mainTexture as Texture2D;
 }
 
-public function OnMouseUp()
+public function OnMouseUp():void
 {
 	var jobScore = GameObject.Find("ScriptHolder").GetComponent(JobScore);
 	
@@ -44,13 +46,18 @@ public function OnMouseUp()
 				jobScore.setScore(1);			//Correct! Score + 1
 				jobScore.setSelected(1);
 				selected = true;
+				//jobScore.addRightChoice(this.getTexture());
+				Debug.Log(getTexture());
 			}
 			else
 			{
 				jobScore.setScore(0);			//False! Score +_0
 				jobScore.setSelected(1);
 				selected = true;
+				//jobScore.addWrongChoice(this.getTexture());
 			}
+			
+			selectNumber = jobScore.getSelected();
 		}
 	}
 	Debug.Log("Score : " + jobScore.getScore());
@@ -62,10 +69,21 @@ public function OnMouseUp()
 	}
 }
 
-private function isSelected():void
+private function isSelected(amount:int):void
 {
+	var newPosition : Vector3;
+	
 	//Debug.Log(transform.position);
-   	var newPosition : Vector3 = new Vector3(0.0, 0.0, 1.0);
+   	if(amount == 1){
+   		newPosition = new Vector3(-1.0, 0.0, 1.0);
+   	}
+   	if(amount == 2){
+   		newPosition = new Vector3(1.0, 0.0, 1.0);
+   	}
+   	if(amount == 3){
+   		newPosition = new Vector3(0.0, 0.0, 1.0);
+   	}
+   	
     
     transform.position = Vector3.Lerp(transform.position, newPosition, Time.deltaTime);
 	
