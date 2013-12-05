@@ -165,28 +165,32 @@ private function backToMenu():void
 	return;
 }
 
-private function easyMode():void
+private function easyMode()
 {
-	Application.LoadLevel("CityScene");
 	GameObject.Find("indestructable").GetComponent(globalScript).enableIngameMenu();
 	GameObject.Find("indestructable").GetComponent(globalScript).setAmountBoxes(10);
 	GameObject.Find("indestructable").GetComponent(globalScript).setAmountCorrect(3);
+	GameObject.Find("indestructable").GetComponent(globalScript).createScore();
+	yield WaitForSeconds(1);
+	Application.LoadLevel("CityScene");
 }
 
 private function normalMode():void
 {
-	Application.LoadLevel("CityScene");
 	GameObject.Find("indestructable").GetComponent(globalScript).enableIngameMenu();
 	GameObject.Find("indestructable").GetComponent(globalScript).setAmountBoxes(13);
 	GameObject.Find("indestructable").GetComponent(globalScript).setAmountCorrect(3);
+	GameObject.Find("indestructable").GetComponent(globalScript).createScore();
+	Application.LoadLevel("CityScene");
 }
 
 private function hardMode():void
 {
-	Application.LoadLevel("CityScene");
 	GameObject.Find("indestructable").GetComponent(globalScript).enableIngameMenu();
 	GameObject.Find("indestructable").GetComponent(globalScript).setAmountBoxes(16);
 	GameObject.Find("indestructable").GetComponent(globalScript).setAmountCorrect(3);
+	GameObject.Find("indestructable").GetComponent(globalScript).createScore();
+	Application.LoadLevel("CityScene");
 }
 
 function SetResolution(width:int, height:int):void

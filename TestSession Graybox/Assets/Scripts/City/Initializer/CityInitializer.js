@@ -22,6 +22,9 @@ private var airHostessB 	: Rect 	= Rect(165	+ (buttonWidth * 2)		, Screen.height
 private var mechanicB 		: Rect 	= Rect(220	+ (buttonWidth * 3)		, Screen.height - 250, buttonWidth, buttonHeight);
 private var waiterB 		: Rect 	= Rect(275	+ (buttonWidth * 4)		, Screen.height - 250, buttonWidth, buttonHeight);
 
+private var starTexture:Texture2D = null;
+private var starOpenTexture:Texture2D = null;
+
 //make new rectangles if you need more buttons
 //syntax
 //private var "buttonname" : Rect = Rect(x,y,width,height);
@@ -44,6 +47,8 @@ private var guiStyle			:GUIStyle	= new GUIStyle();
 
 function Awake()
 {
+	starTexture = GameObject.Find("indestructable").GetComponent(TextureLoader).getTexture("StarClosed");
+	starOpenTexture = GameObject.Find("indestructable").GetComponent(TextureLoader).getTexture("StarOpen");
 	fillButtonTextureArray();
 	textStyle.fontSize = 24;
 	textStyle.normal.textColor = Color.white;
@@ -210,33 +215,125 @@ function OnGUI()
 
 	if(GUI.Button(fireB,"", guiStyle)) fireman();
 	GUI.DrawTexture(fireB, buttonTextureArray[0] as Texture, ScaleMode.StretchToFill);			//fireman
-	
+
+	for(var i:int=0; i<GameObject.Find("indestructable").GetComponent(globalScript).getScore("Brandweer"); i++)
+	{
+		GUI.DrawTexture(Rect(fireB.x + (10 * (i+1)) + 50 * i, fireB.y + 140, 50,50), starTexture);
+	}
+	for(var j:int=i; j<3; j++)
+	{
+		GUI.DrawTexture(Rect(fireB.x + (10 * (j+1)) + 50 * j, fireB.y + 140, 50, 50), starOpenTexture);
+	}
+
 	if(GUI.Button(armyB,"", guiStyle)) army();
 	GUI.DrawTexture(armyB, buttonTextureArray[1] as Texture, ScaleMode.StretchToFill);			//army
+	
+	for(i=0; i<GameObject.Find("indestructable").GetComponent(globalScript).getScore("Leger"); i++)
+	{
+		GUI.DrawTexture(Rect(armyB.x + (10 * (i+1)) + 50 * i, armyB.y + 140, 50,50), starTexture);
+	}
+	for(j=i; j<3; j++)
+	{
+		GUI.DrawTexture(Rect(armyB.x + (10 * (j+1)) + 50 * j, armyB.y + 140, 50, 50), starOpenTexture);
+	}
+	
 	
 	if(GUI.Button(marineB,"", guiStyle)) marine();
 	GUI.DrawTexture(marineB, buttonTextureArray[2] as Texture, ScaleMode.StretchToFill);		//marine
 	
+	for(i=0; i<GameObject.Find("indestructable").GetComponent(globalScript).getScore("Marinier"); i++)
+	{
+		GUI.DrawTexture(Rect(marineB.x + (10 * (i+1)) + 50 * i, marineB.y + 140, 50,50), starTexture);
+	}
+	for(j=i; j<3; j++)
+	{
+		GUI.DrawTexture(Rect(marineB.x + (10 * (j+1)) + 50 * j, marineB.y + 140, 50, 50), starOpenTexture);
+	}
+	
+	
 	if(GUI.Button(nurseB,"", guiStyle)) nurse(); 
 	GUI.DrawTexture(nurseB, buttonTextureArray[3] as Texture, ScaleMode.StretchToFill);			//nurse
+	
+	for(i=0; i<GameObject.Find("indestructable").GetComponent(globalScript).getScore("Verpleger"); i++)
+	{
+		GUI.DrawTexture(Rect(nurseB.x + (10 * (i+1)) + 50 * i, nurseB.y + 140, 50,50), starTexture);
+	}
+	for(j=i; j<3; j++)
+	{
+		GUI.DrawTexture(Rect(nurseB.x + (10 * (j+1)) + 50 * j, nurseB.y + 140, 50, 50), starOpenTexture);
+	}
 	
 	if(GUI.Button(policeB,"", guiStyle)) police();
 	GUI.DrawTexture(policeB, buttonTextureArray[4] as Texture, ScaleMode.StretchToFill);		//police
 	
+		for(i=0; i<GameObject.Find("indestructable").GetComponent(globalScript).getScore("Politie"); i++)
+	{
+		GUI.DrawTexture(Rect(policeB.x + (10 * (i+1)) + 50 * i, policeB.y + 140, 50,50), starTexture);
+	}
+	for(j=i; j<3; j++)
+	{
+		GUI.DrawTexture(Rect(policeB.x + (10 * (j+1)) + 50 * j, policeB.y + 140, 50, 50), starOpenTexture);
+	}
+	
 	if(GUI.Button(cleanerB,"", guiStyle)) cleaner();
 	GUI.DrawTexture(cleanerB, buttonTextureArray[5] as Texture, ScaleMode.StretchToFill);		//cleaner
+	
+		for(i=0; i<GameObject.Find("indestructable").GetComponent(globalScript).getScore("Schoonmaker"); i++)
+	{
+		GUI.DrawTexture(Rect(cleanerB.x + (10 * (i+1)) + 50 * i, cleanerB.y + 140, 50,50), starTexture);
+	}
+	for(j=i; j<3; j++)
+	{
+		GUI.DrawTexture(Rect(cleanerB.x + (10 * (j+1)) + 50 * j, cleanerB.y + 140, 50, 50), starOpenTexture);
+	}
 	
 	if(GUI.Button(truckDriverB,"", guiStyle)) truckDriver();
 	GUI.DrawTexture(truckDriverB, buttonTextureArray[6] as Texture, ScaleMode.StretchToFill);	//truckdriver
 
+		for(i=0; i<GameObject.Find("indestructable").GetComponent(globalScript).getScore("Truck_Chauffeur"); i++)
+	{
+		GUI.DrawTexture(Rect(truckDriverB.x + (10 * (i+1)) + 50 * i, truckDriverB.y + 140, 50,50), starTexture);
+	}
+	for(j=i; j<3; j++)
+	{
+		GUI.DrawTexture(Rect(truckDriverB.x + (10 * (j+1)) + 50 * j, truckDriverB.y + 140, 50, 50), starOpenTexture);
+	}
+
 	if(GUI.Button(airHostessB,"", guiStyle)) airHostess();
 	GUI.DrawTexture(airHostessB, buttonTextureArray[7] as Texture, ScaleMode.StretchToFill);	//airhostess
+	
+		for(i=0; i<GameObject.Find("indestructable").GetComponent(globalScript).getScore("Stewardess"); i++)
+	{
+		GUI.DrawTexture(Rect(airHostessB.x + (10 * (i+1)) + 50 * i, airHostessB.y + 140, 50,50), starTexture);
+	}
+	for(j=i; j<3; j++)
+	{
+		GUI.DrawTexture(Rect(airHostessB.x + (10 * (j+1)) + 50 * j, airHostessB.y + 140, 50, 50), starOpenTexture);
+	}
 	
 	if(GUI.Button(mechanicB,"", guiStyle)) mechanic();
 	GUI.DrawTexture(mechanicB, buttonTextureArray[8] as Texture, ScaleMode.StretchToFill);		//mechanic
 	
+		for(i=0; i<GameObject.Find("indestructable").GetComponent(globalScript).getScore("Monteur"); i++)
+	{
+		GUI.DrawTexture(Rect(mechanicB.x + (10 * (i+1)) + 50 * i, mechanicB.y + 140, 50,50), starTexture);
+	}
+	for(j=i; j<3; j++)
+	{
+		GUI.DrawTexture(Rect(mechanicB.x + (10 * (j+1)) + 50 * j, mechanicB.y + 140, 50, 50), starOpenTexture);
+	}
+	
 	if(GUI.Button(waiterB,"", guiStyle)) waiter();
 	GUI.DrawTexture(waiterB, buttonTextureArray[9] as Texture, ScaleMode.StretchToFill);		//waiter
+	
+		for(i=0; i<GameObject.Find("indestructable").GetComponent(globalScript).getScore("Kelner"); i++)
+	{
+		GUI.DrawTexture(Rect(waiterB.x + (10 * (i+1)) + 50 * i, waiterB.y + 140, 50,50), starTexture);
+	}
+	for(j=i; j<3; j++)
+	{
+		GUI.DrawTexture(Rect(waiterB.x + (10 * (j+1)) + 50 * j, waiterB.y + 140, 50, 50), starOpenTexture);
+	}
 	
 	GUI.Label(Rect(55, 20, Screen.width, 100), "Kies hier je baan", textStyle);
 }
@@ -244,60 +341,70 @@ function OnGUI()
 private function fireman()
 {
 	GameObject.Find("indestructable").GetComponent(globalScript).setJob("Fireman");
+	GameObject.Find("indestructable").GetComponent(globalScript).setJobNaam("Brandweer");
 	startGame();
 }
 
 private function army()
 {
 	GameObject.Find("indestructable").GetComponent(globalScript).setJob("Army");
+	GameObject.Find("indestructable").GetComponent(globalScript).setJobNaam("Leger");
 	startGame();
 }
 
 private function marine()
 {
 	GameObject.Find("indestructable").GetComponent(globalScript).setJob("Marine");
+	GameObject.Find("indestructable").GetComponent(globalScript).setJobNaam("Marinier");
 	startGame();
 }
 
 private function nurse()
 {
 	GameObject.Find("indestructable").GetComponent(globalScript).setJob("Nurse");
+	GameObject.Find("indestructable").GetComponent(globalScript).setJobNaam("Verpleger");
 	startGame();
 }
 
 private function police()
 {
 	GameObject.Find("indestructable").GetComponent(globalScript).setJob("Policeman");
+	GameObject.Find("indestructable").GetComponent(globalScript).setJobNaam("Politie");
 	startGame();
 }
 
 private function cleaner()
 {
 	GameObject.Find("indestructable").GetComponent(globalScript).setJob("Cleaner");
+	GameObject.Find("indestructable").GetComponent(globalScript).setJobNaam("Schoonmaker");
 	startGame();
 }
 
 private function truckDriver()
 {
 	GameObject.Find("indestructable").GetComponent(globalScript).setJob("Truckdriver");
+	GameObject.Find("indestructable").GetComponent(globalScript).setJobNaam("Truck_Chauffeur");
 	startGame();
 }
 
 private function airHostess()
 {
 	GameObject.Find("indestructable").GetComponent(globalScript).setJob("Airhostess");
+	GameObject.Find("indestructable").GetComponent(globalScript).setJobNaam("Stewardess");
 	startGame();
 }
 
 private function mechanic()
 {
 	GameObject.Find("indestructable").GetComponent(globalScript).setJob("Mechanic");
+	GameObject.Find("indestructable").GetComponent(globalScript).setJobNaam("Monteur");
 	startGame();
 }
 
 private function waiter()
 {
 	GameObject.Find("indestructable").GetComponent(globalScript).setJob("Waiter");
+	GameObject.Find("indestructable").GetComponent(globalScript).setJobNaam("Kelner");
 	startGame();
 }
 

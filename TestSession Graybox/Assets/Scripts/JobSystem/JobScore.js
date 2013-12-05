@@ -1,6 +1,5 @@
 #pragma strict
 
-
 private var amountSelected : int;
 
 private var setButton:boolean = false;
@@ -50,6 +49,8 @@ public function endJob():void
 	{
 		endString = "Deze Baan is succesvol door jou uitgevoerd!\nUitstekend gedaan!\nJe verdient 3 sterren!";
 	}
+	//write the score to XML
+	GameObject.Find("indestructable").GetComponent(globalScript).writeScoreToXML();
 	setButton = true;
 	//Debug.Log("Jouw Score is : " + score);
 	//Debug.Log("Deze Baan is succesvol door jou uitgevoerd! Goed gedaan!");
@@ -154,7 +155,7 @@ function OnGUI()
 //	return wwwPNG.texture;
 //}
 
-private function backToSelect()
+private function backToSelect():void
 {
 	GameObject.Find("indestructable").GetComponent(globalScript).setJobSceneBool(false);
 	Application.LoadLevel("CityScene");
