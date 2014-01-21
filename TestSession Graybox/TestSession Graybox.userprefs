@@ -1,14 +1,6 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\JobSystem\JobScore.js">
-    <Files>
-      <File FileName="Assets\Scripts\JobSystem\JobLabel.js" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\JobSystem\JobClass\Jobs.js" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\JobSystem\JobScore.js" Line="39" Column="25" />
-      <File FileName="Assets\Scripts\JobSystem\Initializer\Initialization.js" Line="21" Column="15" />
-      <File FileName="Assets\Scripts\Menu and global\TextureLoader.js" Line="119" Column="48" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

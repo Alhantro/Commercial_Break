@@ -42,6 +42,8 @@ private var seconds	:float = 0.0;
 
 private var handPos : Vector3;
 
+private var cityBackground:Texture2D = null;
+
 private var buttonTextureArray	:Array		= new Array();
 private var guiStyle			:GUIStyle	= new GUIStyle();
 
@@ -49,6 +51,7 @@ function Awake()
 {
 	starTexture = GameObject.Find("indestructable").GetComponent(TextureLoader).getTexture("StarClosed");
 	starOpenTexture = GameObject.Find("indestructable").GetComponent(TextureLoader).getTexture("StarOpen");
+	cityBackground = GameObject.Find("indestructable").GetComponent(TextureLoader).loadTexture("/CityBackground/Citybackground.png", true);
 	fillButtonTextureArray();
 	textStyle.fontSize = 24;
 	textStyle.normal.textColor = Color.white;
@@ -207,7 +210,7 @@ function OnGUI()
 //	if(GUI.Button(policeB,"Politie")) police();
 //	
 //	GUI.Label(Rect(20, 20, Screen.width, 100), "Kies hier je baan", textStyle);
-
+	GUI.DrawTexture(Rect(0,0,Screen.width, Screen.height), cityBackground);
 
 //
 //buttons with textures

@@ -47,6 +47,7 @@
      <Compile Include="Assets\Scripts\Editor\PostBuild.js" />
      <None Include="Assets\Scripts\City\XML\City.xml" />
      <None Include="Assets\Asset Kinect\Shaders\Normal-Diffuse.shader" />
+     <None Include="Assets\Scores\Score.xml" />
  <Reference Include="Assembly-UnityScript">
  <HintPath>Library\ScriptAssemblies\Assembly-UnityScript.dll</HintPath>
  </Reference>

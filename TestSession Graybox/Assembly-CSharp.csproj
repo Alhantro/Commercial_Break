@@ -57,6 +57,7 @@
      <Compile Include="Assets\Scripts\Kinect\KinectWrapper\SkeletonWrapper.cs" />
      <None Include="Assets\Scripts\City\XML\City.xml" />
      <None Include="Assets\Asset Kinect\Shaders\Normal-Diffuse.shader" />
+     <None Include="Assets\Scores\Score.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

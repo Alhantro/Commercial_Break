@@ -93,6 +93,34 @@ private function loadTexture(textureName:String):IEnumerator
 	
 }
 
+public function loadTexture(filePath:String, loadOnRuntime:boolean):Texture2D
+{
+	var path:String = Application.dataPath + filePath;
+	
+	if(pngExistsInArray(path))
+	{
+		return getTexture(Path.GetFileNameWithoutExtension(path));
+	}
+	else
+	{
+		if(File.Exists(path))
+		{
+			var wwwPNG = new WWW("file://"+path);
+			
+			textureArray.push(wwwPNG.texture);
+			textureNameArray.push(Path.GetFileNameWithoutExtension(path));
+			
+			return wwwPNG.texture;
+		}
+		else
+		{
+			Debug.Log("The file you wanted to load does not exist!" + Path.GetFileNameWithoutExtension(path));
+		}
+	}
+	
+	return null;
+}
+
 public function getTexture(textureName:String):Texture2D
 {
 	var texture:Texture2D = null;
