@@ -1,6 +1,15 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\City\Initializer\CityInitializer.js">
+    <Files>
+      <File FileName="Assets\Scripts\City\Initializer\CityInitializer.js" Line="195" Column="45" />
+      <File FileName="Assets\Scripts\Menu and global\TextureLoader.js" Line="12" Column="48" />
+      <File FileName="Assets\Scripts\Controller\KinectController.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Menu and global\globalScript.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Menu and global\MenuScript.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Kinect\KinectWrapper\KinectSensor.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

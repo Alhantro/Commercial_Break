@@ -17,12 +17,16 @@ private var seconds:float;
 
 private var lastHit : String;
 
+private var handSelector:Array = [];
+
 function Start ()
 {
 }
 
 function Update ()
 {
+	//Debug.Log(calculateHand());
+	
 	jobScene = GameObject.Find("indestructable").GetComponent(globalScript).getJobSceneBool();
 	
 	//Debug.Log(jobScene);
@@ -37,8 +41,18 @@ function Update ()
 	finalPos.z = handPosition.z;
 	
 	//print(Input.mousePosition.y + "   -   " + (Screen.height - Input.mousePosition.y));
+	if(handSelector.length < 15)
+	{
+		handSelector.Add(finalPos);
+		//Debug.Log(handSelector.length);
+	}
+	else
+	{
+		addToArray(finalPos);
+	}
 	
-	finalHandPos = finalPos;	//With Kinect
+	
+	finalHandPos = calculateHand();	//With Kinect
 	//finalHandPos = Vector3((Input.mousePosition.x), (Screen.height - Input.mousePosition.y), 0.0f);	//With mouse
 	
 	GameObject.Find("indestructable").GetComponent(globalScript).setHand(finalHandPos);			//Activate this one for kinect controls
@@ -92,14 +106,14 @@ private function increaseTimer()
 function OnGUI()
 {
 	GUI.depth = 0;
-	GUI.DrawTexture(Rect((finalPos.x - 32.0), (finalPos.y - 32.0), 64, 64), mouseHand, ScaleMode.ScaleToFit, true);		//Activate this one for kinect controls
+	GUI.DrawTexture(Rect((finalHandPos.x - 32.0), (finalHandPos.y - 32.0), 64, 64), mouseHand, ScaleMode.ScaleToFit, true);		//Activate this one for kinect controls
 	//GUI.DrawTexture(Rect((Input.mousePosition.x - 32.0), (Screen.height - Input.mousePosition.y - 32.0), 64, 64), mouseHand, ScaleMode.ScaleToFit, true);		//Activate this one for mouse controls
 }
 
 function scalePosition(midScreenPos:Vector3, position:Vector3):Vector3
 {
 	var difference = position - midScreenPos;
-	var newPos = midScreenPos + (difference *2);
+	var newPos = midScreenPos + (difference * 2);
 	
 	if(newPos.x < 0) newPos.x = 0;
 	if(newPos.x > Screen.width) newPos.x = Screen.width;
@@ -108,4 +122,54 @@ function scalePosition(midScreenPos:Vector3, position:Vector3):Vector3
 	
 	
 	return newPos;
+}
+
+function addToArray(newPosition:Vector3):void
+{
+	for (var i=0;i<handSelector.length;i++)
+	{
+		if(i<14)						// Array of last 10 positions moving 1 forward.
+		{
+			handSelector[i] = handSelector[i+1];
+			//Position 1 becomes 2, 2 becomes 3.. etc.
+		}
+		if(i==14)						// Add latest position
+		{
+			/*var tempPos:Vector3 = handSelector[i];
+			
+			if((newPosition.x - tempPos.x) < 200 && (newPosition.x - tempPos.x) > -150){
+				tempPos.x = newPosition.x;
+			}
+			if((newPosition.y - tempPos.y) < 200 && (newPosition.y - tempPos.y) > -150){
+				tempPos.y = newPosition.y;
+			}
+			
+			tempPos.z = newPosition.z;
+			
+			handSelector[i] = tempPos;*/
+			
+			handSelector[i] = newPosition;
+			
+			//Debug.Log(tempPos);
+			//Positon 10 becomes latest position captured.
+		}
+	}
+}
+
+function calculateHand():Vector3
+{
+	var calculatedHandPosition:Vector3;
+	
+	for (var j=0;j<handSelector.length;j++)
+	{
+		var tempVec3:Vector3 = handSelector[j];
+		calculatedHandPosition += tempVec3;
+	}
+	
+	calculatedHandPosition.x = (calculatedHandPosition.x / handSelector.length);
+	calculatedHandPosition.y = (calculatedHandPosition.y / handSelector.length);
+	calculatedHandPosition.z = (calculatedHandPosition.z / handSelector.length);
+	
+
+	return calculatedHandPosition;
 }

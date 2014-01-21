@@ -92,7 +92,7 @@ function Update()
 	if(checkInButton(truckDriverB)) truckDriver();
 	if(checkInButton(airHostessB)) airHostess();
 	if(checkInButton(mechanicB)) mechanic();
-	if(checkInButton(waiterB)) waiter();
+	if(checkInButton(waiterB)) waiter(); 
 	
 	//Debug.Log(seconds);
 }
@@ -199,7 +199,7 @@ function fillButtonTextureArray():void
 
 function OnGUI()
 {
-
+	
 //
 //buttons without texture just a string
 //
